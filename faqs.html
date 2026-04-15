@@ -1,0 +1,505 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Frequently Asked Questions about Pragathi Home Solutions's services, pricing, and process." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQs | Pragathi Home Solutions</title>
+    <style>
+      .faq-hero {
+        background: linear-gradient(135deg, #1d2c4c 0%, #1c85e8 100%);
+        padding: 100px 0 70px;
+        text-align: center;
+      }
+      .faq-hero h1 { color: #fff; font-size: 56px; font-weight: 900; margin-bottom: 14px; }
+      .faq-hero p { color: rgba(255,255,255,.75); font-size: 18px; font-weight: 300; max-width: 540px; margin: 0 auto; }
+      .section-label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        color: #1c85e8;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .faq-category-btn {
+        padding: 8px 22px;
+        border: 2px solid #e0e6f0;
+        border-radius: 50px;
+        background: transparent;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .3s ease;
+        font-family: 'Rubik', sans-serif;
+        margin: 4px;
+      }
+      .faq-category-btn:hover, .faq-category-btn.active {
+        background: #1c85e8;
+        border-color: #1c85e8;
+        color: #fff;
+      }
+      .faq-accordion {
+        border: none;
+      }
+      .faq-item {
+        border: 1px solid #eef0f6;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: box-shadow .3s;
+      }
+      .faq-item.open { box-shadow: 0 8px 30px rgba(28,133,232,.12); }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 28px;
+        cursor: pointer;
+        background: #fff;
+        transition: background .3s;
+      }
+      .faq-item.open .faq-question { background: #f0f7ff; }
+      .faq-question h6 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1d2c4c;
+        padding-right: 20px;
+        line-height: 1.5;
+      }
+      .faq-question .faq-icon {
+        font-size: 20px;
+        color: #1c85e8;
+        transition: transform .3s ease;
+        min-width: 24px;
+      }
+      .faq-item.open .faq-question .faq-icon { transform: rotate(45deg); }
+      .faq-answer {
+        display: none;
+        padding: 0 28px 22px;
+        background: #f0f7ff;
+        color: #666;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+      .faq-item.open .faq-answer { display: block; }
+      .process-card {
+        text-align: center;
+        padding: 30px 20px;
+        position: relative;
+      }
+      .process-num {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #1c85e8;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-family: 'Playfair Display', serif;
+      }
+      .process-card h5 { font-size: 18px; font-weight: 500; color: #1d2c4c; margin-bottom: 8px; }
+      .process-card p { font-size: 14px; color: #777; font-weight: 300; margin: 0; }
+      .cta-section {
+        background: linear-gradient(135deg, #1d2c4c 0%, #1c85e8 100%);
+        padding: 80px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body class="stretched side-push-panel">
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="#"><i class="bi-x-lg"></i></a>
+      </div>
+      <div class="side-panel-wrap">
+        <div class="widget">
+          <h4 class="fw-normal">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <div id="logo" class="me-lg-0">
+                <a href="index.html">
+                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                </a>
+              </div>
+              <div class="header-misc">
+                <div id="side-panel-trigger" class="side-panel-trigger">
+                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
+                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="studio.html"><div>Studio</div></a>
+                    <ul class="sub-menu-container">
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item current"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Hero -->
+      <section class="faq-hero">
+        <p class="section-label" style="color:rgba(255,255,255,.6)">Help Center</p>
+        <h1 class="font-secondary">Frequently Asked Questions</h1>
+        <p>Everything you need to know about working with Pragathi Home Solutions.</p>
+      </section>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap">
+          <div class="container" style="padding: 70px 15px;">
+
+            <!-- Category Filter -->
+            <div class="text-center mb-5">
+              <button class="faq-category-btn active" data-faq-cat="all">All Questions</button>
+              <button class="faq-category-btn" data-faq-cat="general">General</button>
+              <button class="faq-category-btn" data-faq-cat="pricing">Pricing</button>
+              <button class="faq-category-btn" data-faq-cat="process">Process</button>
+              <button class="faq-category-btn" data-faq-cat="timeline">Timeline</button>
+              <button class="faq-category-btn" data-faq-cat="materials">Materials</button>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+
+                <!-- General -->
+                <p class="section-label mt-2" data-faq-group="general">General Questions</p>
+
+                <div class="faq-item open" data-faq-cat="general">
+                  <div class="faq-question">
+                    <h6>What services does Pragathi Home Solutions offer?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    We offer a full spectrum of interior design services including residential and commercial design, space planning, 3D visualization, furniture sourcing, project management, Vastu consultation, and renovation management. Whether you need a single room styled or a full-floor corporate fit-out, we have the expertise to handle it.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="general">
+                  <div class="faq-question">
+                    Absolutely. We have completed projects across India — including Mumbai, Hyderabad, Chennai, and Delhi — as well as international commissions. We work remotely where needed and travel for site visits at key project milestones.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="general">
+                  <div class="faq-question">
+                    <h6>Can you work with my existing furniture and décor?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Of course! We often work around pieces you love. During the initial consultation, we assess your existing furniture and décor and build a design plan that complements what you already have while elevating the overall aesthetic.
+                  </div>
+                </div>
+
+                <!-- Pricing -->
+                <p class="section-label mt-5" data-faq-group="pricing">Pricing</p>
+
+                <div class="faq-item" data-faq-cat="pricing">
+                  <div class="faq-question">
+                    <h6>How is the design fee structured?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Our fees vary depending on project scope. We offer three models: (1) <strong>Fixed Fee</strong> — ideal for smaller, well-defined projects; (2) <strong>Per Square Foot</strong> — for residential and commercial renovations; (3) <strong>Percentage of Total Project Cost</strong> — commonly used for luxury and high-budget projects. We provide a transparent quotation after the first consultation.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="pricing">
+                  <div class="faq-question">
+                    <h6>What is the minimum project budget you accept?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    We typically accept residential projects with a minimum design budget of ₹5 lakhs and a furnishing/execution budget of ₹15 lakhs and above. For commercial projects, the minimum starts at ₹25 lakhs. We believe in delivering quality over volume, so we take on select projects where we can make a meaningful impact.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="pricing">
+                  <div class="faq-question">
+                    <h6>Is the initial consultation free?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Yes! Your first 60-minute consultation — either in-person at our studio or via video call — is completely free. This session allows us to understand your vision, assess your space, and give you an initial idea of what we can achieve together.
+                  </div>
+                </div>
+
+                <!-- Process -->
+                <p class="section-label mt-5" data-faq-group="process">Our Process</p>
+
+                <div class="faq-item" data-faq-cat="process">
+                  <div class="faq-question">
+                    <h6>What is your design process from start to finish?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Our proven 6-step process includes: <strong>Discovery &amp; Brief</strong> (understanding your lifestyle and aspirations) → <strong>Concept Development</strong> (mood boards, style direction) → <strong>Design Proposal</strong> (floor plans, 3D renders, material palettes) → <strong>Revision &amp; Approval</strong> → <strong>Execution &amp; Procurement</strong> → <strong>Styling &amp; Handover</strong>. We keep you involved at every stage.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="process">
+                  <div class="faq-question">
+                    <h6>Will I have a dedicated point of contact throughout my project?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Yes. Every client is assigned a dedicated Project Manager who coordinates between the design team, contractors, and vendors. You'll have a single point of contact for updates, queries, and escalations throughout the project lifecycle.
+                  </div>
+                </div>
+
+                <!-- Timeline -->
+                <p class="section-label mt-5" data-faq-group="timeline">Timeline</p>
+
+                <div class="faq-item" data-faq-cat="timeline">
+                  <div class="faq-question">
+                    <h6>How long does a typical interior design project take?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Timeline depends on project size and complexity. A single room typically takes 4–6 weeks. A full apartment or villa can take 3–6 months. Large commercial projects may run 6–12 months. We provide a detailed project schedule at the outset and update it regularly so you always know where things stand.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="timeline">
+                  <div class="faq-question">
+                    <h6>What if my project gets delayed due to material supply issues?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    We proactively manage supply chains and work with trusted local vendors to minimise delays. In cases where specific materials face supply disruptions, we propose equivalent alternatives promptly so your project stays on track. We maintain transparent communication about any changes to the schedule.
+                  </div>
+                </div>
+
+                <!-- Materials -->
+                <p class="section-label mt-5" data-faq-group="materials">Materials & Sustainability</p>
+
+                <div class="faq-item" data-faq-cat="materials">
+                  <div class="faq-question">
+                    <h6>Do you offer eco-friendly or sustainable design options?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    Sustainability is at the heart of our practice. We source FSC-certified wood, low-VOC paints, recycled metals, and locally-crafted furniture to reduce our carbon footprint. We help clients earn green building ratings and can design entirely around an eco-conscious brief if desired.
+                  </div>
+                </div>
+
+                <div class="faq-item" data-faq-cat="materials">
+                  <div class="faq-question">
+                    <h6>Where do you source your furniture and materials from?</h6>
+                    <i class="bi-plus-lg faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    We work with a curated network of Indian artisans, premium furniture brands (both domestic and international), and specialty material suppliers. We prioritize quality craftsmanship and unique pieces — you won't find generic catalogue items in our projects. We also provide complete transparency on pricing with no hidden markups beyond our standard procurement fee.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Process Steps -->
+          <div style="background:#f8f9fd; padding:70px 0;">
+            <div class="container">
+              <div class="text-center mb-6">
+                <p class="section-label">How It Works</p>
+                <h2 class="font-secondary" style="font-size:40px; font-weight:700; color:#1d2c4c;">Our 6-Step Process</h2>
+              </div>
+              <div class="row col-mb-30">
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">1</div>
+                    <h5>Discovery</h5>
+                    <p>Free consultation & brief collection</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">2</div>
+                    <h5>Concept</h5>
+                    <p>Mood boards & style direction</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">3</div>
+                    <h5>Design</h5>
+                    <p>Floor plans, 3D renders & materials</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">4</div>
+                    <h5>Approval</h5>
+                    <p>Revisions & client sign-off</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">5</div>
+                    <h5>Execution</h5>
+                    <p>Construction, procurement & install</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                  <div class="process-card">
+                    <div class="process-num">6</div>
+                    <h5>Handover</h5>
+                    <p>Styling, photography & move-in</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-section">
+            <div class="container">
+              <h2 class="font-secondary" style="font-size:44px; font-weight:700; color:#fff; margin-bottom:16px;">Still have questions?</h2>
+              <p style="color:rgba(255,255,255,.8); font-size:18px; font-weight:300; max-width:500px; margin:0 auto 30px;">
+                Our design consultants are happy to help you every step of the way.
+              </p>
+              <a href="contact.html" class="button button-large button-rounded" style="background:#fff; color:#1c85e8; font-weight:500;">Contact Us Today</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div class="container">
+          <div class="footer-widgets-wrap">
+            <div class="row col-mb-50">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
+                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Residential Design</a></li>
+                    <li><a href="#">Apartment Interiors</a></li>
+                    <li><a href="#">3D Visualization</a></li>
+                    <li><a href="#">Renovation Consulting</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Company</h4>
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4>Get In Touch</h4>
+                  <address style="font-style:normal; color:#525975; font-size:15px; font-weight:300; line-height:1.8;">
+                    Bengaluru, Karnataka<br />
+                    Working Days: Monday - Sunday<br />
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line m-0"></div>
+        <div id="copyrights" style="background-color: #fff">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+    <script>
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', function() {
+          const item = this.parentElement;
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+
+      // FAQ Category Filter
+      document.querySelectorAll('.faq-category-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const cat = this.dataset.faqCat;
+          document.querySelectorAll('.faq-item').forEach(item => {
+            if (cat === 'all' || item.dataset.faqCat === cat) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+          document.querySelectorAll('[data-faq-group]').forEach(label => {
+            label.style.display = (cat === 'all' || cat === label.dataset.faqGroup) ? 'block' : 'none';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

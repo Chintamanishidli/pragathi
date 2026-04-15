@@ -1,0 +1,474 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="author" content="Pragathi Home Solutions" />
+    <meta name="description" content="Explore our stunning interior design studio projects - from luxury apartments to commercial spaces." />
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Core Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="css/font-icons.css" />
+
+    <!-- Niche Demos -->
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Studio | Pragathi Home Solutions</title>
+    <style>
+      .studio-hero {
+        background: url("assets/interior-design/images/hero-image.jpg") center center no-repeat;
+        background-size: cover;
+        padding: 120px 0 80px;
+        position: relative;
+      }
+      .studio-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 15, 40, 0.55);
+      }
+      .studio-hero .container { position: relative; z-index: 2; }
+      .filter-bar {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 40px 0 50px;
+      }
+      .filter-btn {
+        padding: 8px 24px;
+        border: 2px solid #1c85e8;
+        border-radius: 50px;
+        background: transparent;
+        color: #1c85e8;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .3s ease;
+        font-family: 'Rubik', sans-serif;
+      }
+      .filter-btn:hover, .filter-btn.active {
+        background: #1c85e8;
+        color: #fff;
+      }
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 24px;
+      }
+      .project-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+        transition: transform .5s ease;
+      }
+      .project-card:hover img { transform: scale(1.06); }
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 30%, rgba(10,15,40,0.85) 100%);
+        opacity: 0;
+        transition: opacity .3s ease;
+        display: flex;
+        align-items: flex-end;
+        padding: 24px;
+      }
+      .project-card:hover .project-overlay { opacity: 1; }
+      .project-info h5 { color: #fff; font-size: 18px; margin: 0 0 4px; }
+      .project-info span { color: rgba(255,255,255,.7); font-size: 13px; }
+      .project-info a {
+        display: inline-block;
+        margin-top: 10px;
+        background: #1c85e8;
+        color: #fff;
+        padding: 6px 18px;
+        border-radius: 3px;
+        font-size: 13px;
+        text-decoration: none;
+        transition: background .3s;
+      }
+      .project-info a:hover { background: #1567c0; }
+      .stats-bar {
+        background: #f8f9fd;
+        padding: 60px 0;
+        margin: 60px 0 0;
+      }
+      .stat-item { text-align: center; }
+      .stat-num {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: #1d2c4c;
+        line-height: 1;
+      }
+      .stat-label { font-size: 16px; color: #666; margin-top: 8px; font-weight: 300; }
+    </style>
+  </head>
+
+  <body class="stretched side-push-panel">
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="#"><i class="bi-x-lg"></i></a>
+      </div>
+      <div class="side-panel-wrap">
+        <div class="widget">
+          <h4 class="fw-normal">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <div id="logo" class="me-lg-0">
+                <a href="index.html">
+                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                </a>
+              </div>
+              <div class="header-misc">
+                <div id="side-panel-trigger" class="side-panel-trigger">
+                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
+                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item current"><a class="menu-link" href="studio.html"><div>Studio</div></a>
+                    <ul class="sub-menu-container">
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Hero -->
+      <section class="studio-hero">
+        <div class="container">
+          <div class="text-center text-white">
+            <p class="mb-2" style="letter-spacing:3px; font-size:13px; opacity:.7; text-transform:uppercase;">Our Portfolio</p>
+            <h1 class="font-secondary" style="font-size:60px; font-weight:900; margin-bottom:16px;">Design Studio</h1>
+            <p style="font-weight:300; opacity:.8; max-width:560px; margin:0 auto; font-size:18px;">Award-winning interior spaces crafted with passion, precision and artistic vision.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap">
+          <div class="container">
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+              <button class="filter-btn active" data-filter="all">All Projects</button>
+              <button class="filter-btn" data-filter="residential">Residential</button>
+              <button class="filter-btn" data-filter="commercial">Commercial</button>
+              <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+              <button class="filter-btn" data-filter="luxury">Luxury</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row" id="projects-grid">
+              <div class="col-md-4" data-category="residential luxury">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/1.jpg" alt="Minsk Belarus Studio" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Minsk Belarus Studio</h5>
+                      <span>Residential · Luxury</span><br />
+                      <a href="project-detail.html?project=minskbelarus">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="luxury hospitality">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/2.jpg" alt="Malibu Dream Airstream" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Malibu Dream Airstream</h5>
+                      <span>Hospitality · Luxury</span><br />
+                      <a href="project-detail.html?project=malibu">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="residential commercial">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/3.jpg" alt="Modern Condo in City" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Modern Condo in City</h5>
+                      <span>Residential · Commercial</span><br />
+                      <a href="project-detail.html?project=moderncondo">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6" data-category="commercial">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/4.jpg" alt="Skyline Office Hub" style="height:340px;" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Skyline Office Hub</h5>
+                      <span>Commercial · Corporate</span><br />
+                      <a href="project-detail.html?project=skyline">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6" data-category="hospitality">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/5.jpg" alt="Azure Boutique Hotel" style="height:340px;" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Azure Boutique Hotel</h5>
+                      <span>Hospitality · Interior</span><br />
+                      <a href="project-detail.html?project=azure">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="residential">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/6.jpg" alt="Serene Lakehouse" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Serene Lakehouse</h5>
+                      <span>Residential · Zen</span><br />
+                      <a href="project-detail.html?project=lakehouse">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="luxury residential">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/7.jpg" alt="Royal Penthouse Suite" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Royal Penthouse Suite</h5>
+                      <span>Luxury · Residential</span><br />
+                      <a href="project-detail.html?project=penthouse">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="commercial hospitality">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/8.jpg" alt="The Grand Bistro" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>The Grand Bistro</h5>
+                      <span>Commercial · Restaurant</span><br />
+                      <a href="project-detail.html?project=bistro">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="residential luxury">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/9.jpg" alt="Nordic Cliff Villa" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Nordic Cliff Villa</h5>
+                      <span>Residential · Scandinavian</span><br />
+                      <a href="project-detail.html?project=nordicvilla">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="commercial">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/10.jpg" alt="Tech Campus Lounge" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Tech Campus Lounge</h5>
+                      <span>Commercial · Modern</span><br />
+                      <a href="project-detail.html?project=techcampus">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="hospitality luxury">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/11.jpg" alt="Ivory Spa Retreat" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Ivory Spa Retreat</h5>
+                      <span>Hospitality · Wellness</span><br />
+                      <a href="project-detail.html?project=ivoryretreats">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-category="residential">
+                <div class="project-card">
+                  <img src="assets/interior-design/images/studios/12.jpg" alt="Urban Loft Transformation" />
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h5>Urban Loft Transformation</h5>
+                      <span>Residential · Industrial</span><br />
+                      <a href="project-detail.html?project=urbanloft">View Project →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="stats-bar">
+            <div class="container">
+              <div class="row col-mb-30">
+                <div class="col-6 col-md-3 stat-item">
+                  <div class="stat-num counter"><span data-from="0" data-to="340" data-refresh-interval="50" data-speed="2000"></span>+</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                  <div class="stat-num counter"><span data-from="0" data-to="3583" data-refresh-interval="100" data-speed="2000" data-comma="true"></span></div>
+                  <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                  <div class="stat-num counter"><span data-from="0" data-to="18" data-refresh-interval="50" data-speed="2000"></span></div>
+                  <div class="stat-label">Awards Won</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                  <div class="stat-num counter"><span data-from="0" data-to="12" data-refresh-interval="50" data-speed="2000"></span></div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div class="container">
+          <div class="footer-widgets-wrap">
+            <div class="row col-mb-50">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
+                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                  <div class="app-links">
+                    <p>Follow Us</p>
+                    <a href="#" class="link"><i class="bi-instagram"></i> <span>Instagram</span></a><br />
+                    <a href="#" class="link"><i class="bi-facebook"></i> <span>Facebook</span></a><br />
+                    <a href="#" class="link"><i class="bi-pinterest"></i> <span>Pinterest</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Residential Design</a></li>
+                    <li><a href="#">Apartment Interiors</a></li>
+                    <li><a href="#">3D Visualization</a></li>
+                    <li><a href="#">Renovation Consulting</a></li>
+                    <li><a href="#">Furniture Sourcing</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Company</h4>
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="studio.html">Studio Portfolio</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4>Get In Touch</h4>
+                  <address style="font-style:normal; color:#525975; font-size:15px; font-weight:300; line-height:1.8;">
+                    Bengaluru, Karnataka<br />
+                    Working Days: Monday - Sunday<br />
+                    <a href="tel:+914023456789" style="color:#1c85e8;">+91 40 2345 6789</a><br />
+                    <a href="mailto:hello@pragathi.in" style="color:#1c85e8;">hello@pragathi.in</a>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line m-0"></div>
+        <div id="copyrights" style="background-color: #fff">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+    <script>
+      // Filter functionality
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          document.querySelectorAll('#projects-grid [data-category]').forEach(card => {
+            if (filter === 'all' || card.dataset.category.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

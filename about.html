@@ -1,0 +1,495 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Learn about Pragathi Home Solutions — our story, our team, and our design philosophy." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | Pragathi Home Solutions</title>
+    <style>
+      .about-hero {
+        background: url("assets/interior-design/images/about/hero.jpg") center center no-repeat;
+        background-size: cover;
+        padding: 130px 0 90px;
+        position: relative;
+      }
+      .about-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10,20,50,0.6);
+      }
+      .about-hero .container { position: relative; z-index: 2; }
+      .team-card {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .team-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        box-shadow: 0 8px 32px rgba(28,133,232,.15);
+        transition: transform .3s ease, box-shadow .3s ease;
+      }
+      .team-img:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(28,133,232,.25);
+      }
+      .team-name { font-size: 20px; font-weight: 500; color: #1d2c4c; margin: 16px 0 4px; }
+      .team-role { font-size: 14px; color: #1c85e8; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
+      .team-bio { font-size: 14px; color: #777; font-weight: 300; margin-top: 8px; padding: 0 10px; }
+      .team-social a { color: #AAA; font-size: 16px; margin: 0 5px; transition: color .3s; }
+      .team-social a:hover { color: #1c85e8; }
+      .value-card {
+        background: #f8f9fd;
+        border-radius: 8px;
+        padding: 36px 28px;
+        margin-bottom: 24px;
+        border-left: 4px solid #1c85e8;
+        transition: transform .3s ease, box-shadow .3s ease;
+      }
+      .value-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 35px rgba(28,133,232,.12);
+      }
+      .value-card i { font-size: 36px; color: #1c85e8; margin-bottom: 16px; }
+      .value-card h4 { font-size: 20px; font-weight: 500; color: #1d2c4c; margin-bottom: 10px; }
+      .value-card p { color: #777; font-weight: 300; font-size: 15px; margin: 0; }
+      .timeline-item {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+        align-items: flex-start;
+      }
+      .timeline-year {
+        min-width: 70px;
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #1c85e8;
+        line-height: 1;
+        padding-top: 4px;
+      }
+      .timeline-content h5 { color: #1d2c4c; font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+      .timeline-content p { color: #777; font-size: 15px; font-weight: 300; margin: 0; }
+      .timeline-line {
+        border-left: 2px dashed #d0e6f8;
+        padding-left: 30px;
+      }
+      .section-label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        color: #1c85e8;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .award-badge {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 24px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,.07);
+        margin-bottom: 16px;
+        transition: transform .3s;
+      }
+      .award-badge:hover { transform: translateX(6px); }
+      .award-badge i { font-size: 32px; color: gold; }
+      .award-badge h6 { margin: 0 0 3px; font-size: 15px; font-weight: 500; color: #1d2c4c; }
+      .award-badge span { font-size: 13px; color: #999; }
+    </style>
+  </head>
+
+  <body class="stretched side-push-panel">
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="#"><i class="bi-x-lg"></i></a>
+      </div>
+      <div class="side-panel-wrap">
+        <div class="widget">
+          <h4 class="fw-normal">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <div id="logo" class="me-lg-0">
+                <a href="index.html">
+                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                </a>
+              </div>
+              <div class="header-misc">
+                <div id="side-panel-trigger" class="side-panel-trigger">
+                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
+                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="studio.html"><div>Studio</div></a>
+                    <ul class="sub-menu-container">
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item current"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Hero -->
+      <section class="about-hero">
+        <div class="container text-center text-white">
+          <p class="section-label" style="color:rgba(255,255,255,.6)">Who We Are</p>
+          <h1 class="font-secondary" style="font-size:60px; font-weight:900; margin-bottom:16px;">Our Story</h1>
+          <p style="font-weight:300; opacity:.8; max-width:580px; margin:0 auto; font-size:18px;">
+            Born from a love of beautiful spaces, we've been transforming homes and apartments into extraordinary environments since 2016.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap">
+
+          <!-- Our Story -->
+          <div class="container" style="padding: 80px 15px;">
+            <div class="row align-items-center col-mb-50">
+              <div class="col-lg-6">
+                <p class="section-label">Our Beginning</p>
+                <h2 class="font-secondary" style="font-size:42px; font-weight:700; color:#1d2c4c; margin-bottom:20px;">
+                  Transforming Spaces,<br />Elevating Lives
+                </h2>
+                <p style="font-size:17px; color:#555; font-weight:300; line-height:1.9;">
+                  Pragathi Home Solutions was founded in 2016 by Priya Sharma, a Bengaluru-based architect with an eye for minimalist grandeur. What began as a two-person boutique firm has blossomed into a 45-member team of passionate designers, architects, and craftspeople specializing in Interior Designing Service For Home and Apartments.
+                </p>
+                <p style="font-size:17px; color:#555; font-weight:300; line-height:1.9;">
+                  We believe every space tells a story — and our job is to make yours unforgettable. From conceptual sketches to the final finishing touch, we work hand-in-hand with our clients to breathe life into their vision.
+                </p>
+                <a href="contact.html" class="button ms-0 button-rounded bg-color mt-3">Start Your Project</a>
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/interior-design/images/about/1.jpg" alt="Our Story" class="w-100" style="border-radius:6px; box-shadow: 0 20px 60px rgba(0,0,0,.1);" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Values -->
+          <div style="background:#f8f9fd; padding:80px 0;">
+            <div class="container">
+              <div class="text-center mb-6">
+                <p class="section-label">What Drives Us</p>
+                <h2 class="font-secondary" style="font-size:42px; font-weight:700; color:#1d2c4c;">Our Core Values</h2>
+              </div>
+              <div class="row col-mb-24">
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-palette2"></i>
+                    <h4>Artistic Excellence</h4>
+                    <p>Every detail matters. We push creative boundaries to deliver designs that are both beautiful and purposeful.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-people"></i>
+                    <h4>Client-First Approach</h4>
+                    <p>Your vision is our blueprint. We listen deeply before designing, ensuring every space reflects your personality.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-leaf"></i>
+                    <h4>Sustainable Design</h4>
+                    <p>We source eco-friendly materials and employ green design principles that minimize environmental impact.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-lightbulb"></i>
+                    <h4>Innovation First</h4>
+                    <p>We stay ahead of trends, incorporating smart home technologies and cutting-edge materials into every project.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-shield-check"></i>
+                    <h4>Quality & Integrity</h4>
+                    <p>No shortcuts. We use premium materials and certified contractors to guarantee lasting quality.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="value-card">
+                    <i class="bi-clock"></i>
+                    <h4>On-Time Delivery</h4>
+                    <p>We respect your time as much as your space. Our project management ensures delivery within agreed timelines.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team -->
+          <div class="container" style="padding: 80px 15px;">
+            <div class="text-center mb-6">
+              <p class="section-label">The Talent Behind The Magic</p>
+              <h2 class="font-secondary" style="font-size:42px; font-weight:700; color:#1d2c4c;">Meet Our Team</h2>
+              <p style="color:#777; max-width:560px; margin:12px auto 0; font-weight:300;">
+                A diverse collective of architects, stylists, craftspeople and dreamers united by one goal — extraordinary interiors.
+              </p>
+            </div>
+            <div class="row justify-content-center col-mb-30">
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/1.jpg" alt="Priya Sharma" class="team-img" />
+                  <div class="team-name">Priya Sharma</div>
+                  <div class="team-role">Founder & Principal Designer</div>
+                  <p class="team-bio">15 years of experience shaping luxury residential and commercial spaces across India and Southeast Asia.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-linkedin"></i></a>
+                    <a href="#"><i class="bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/3.jpg" alt="Arjun Mehta" class="team-img" />
+                  <div class="team-name">Arjun Mehta</div>
+                  <div class="team-role">Senior Architect</div>
+                  <p class="team-bio">Specializes in sustainable architecture and Vastu-compliant spatial planning with a modernist aesthetic.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-linkedin"></i></a>
+                    <a href="#"><i class="bi-twitter-x"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/5.jpg" alt="Kavitha Reddy" class="team-img" />
+                  <div class="team-name">Kavitha Reddy</div>
+                  <div class="team-role">Interior Stylist</div>
+                  <p class="team-bio">Expert in curating bespoke furniture and art collections that transform spaces into personal galleries.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-instagram"></i></a>
+                    <a href="#"><i class="bi-pinterest"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/7.jpg" alt="Rohan D'Souza" class="team-img" />
+                  <div class="team-name">Rohan D'Souza</div>
+                  <div class="team-role">3D Visualization Lead</div>
+                  <p class="team-bio">Creates photorealistic renders and walkthroughs that help clients see their dream homes before construction begins.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-linkedin"></i></a>
+                    <a href="#"><i class="bi-behance"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/9.jpg" alt="Sunita Nair" class="team-img" />
+                  <div class="team-name">Sunita Nair</div>
+                  <div class="team-role">Project Manager</div>
+                  <p class="team-bio">Ensures every project runs seamlessly on time and budget, acting as the crucial bridge between design and execution.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                  <img src="assets/interior-design/images/studios/11.jpg" alt="Farrukh Tashkentov" class="team-img" />
+                  <div class="team-name">Farrukh Tashkentov</div>
+                  <div class="team-role">Lighting Specialist</div>
+                  <p class="team-bio">Brings spaces to life through thoughtful and dramatic lighting design, from ambience to architectural highlights.</p>
+                  <div class="team-social mt-2">
+                    <a href="#"><i class="bi-instagram"></i></a>
+                    <a href="#"><i class="bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div style="background:#1d2c4c; padding:80px 0;">
+            <div class="container">
+              <div class="row col-mb-50">
+                <div class="col-lg-5">
+                  <p class="section-label" style="color:#1c85e8;">Our Journey</p>
+                  <h2 class="font-secondary" style="font-size:42px; font-weight:700; color:#fff; margin-bottom:20px;">A Decade of Design Excellence</h2>
+                  <p style="color:rgba(255,255,255,.6); font-weight:300; font-size:16px; line-height:1.9;">
+                    From a small studio in Bengaluru to a multi-award-winning firm with a pan-India presence, here's how we grew.
+                  </p>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                  <div class="timeline-line">
+                    <div class="timeline-item">
+                      <div class="timeline-year" style="color:#1c85e8;">2016</div>
+                      <div class="timeline-content">
+                        <h5 style="color:#fff;">Founded in Bengaluru</h5>
+                        <p style="color:rgba(255,255,255,.6);">Priya Sharma opens a small design consultancy with two team members and a bold vision.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year" style="color:#1c85e8;">2015</div>
+                      <div class="timeline-content">
+                        <h5 style="color:#fff;">First National Award</h5>
+                        <p style="color:rgba(255,255,255,.6);">Won the ASID Best Residential Design award for the Lakehouse project in Coorg.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year" style="color:#1c85e8;">2018</div>
+                      <div class="timeline-content">
+                        <h5 style="color:#fff;">Expanded to Mumbai & Bangalore</h5>
+                        <p style="color:rgba(255,255,255,.6);">Opened regional offices with a growing team of 20 creatives and project managers.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year" style="color:#1c85e8;">2021</div>
+                      <div class="timeline-content">
+                        <h5 style="color:#fff;">International Projects</h5>
+                        <p style="color:rgba(255,255,255,.6);">Completed our first international commission — the Minsk Belarus Studio — gaining global recognition.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year" style="color:#1c85e8;">2024</div>
+                      <div class="timeline-content">
+                        <h5 style="color:#fff;">Established & Trusted</h5>
+                        <p style="color:rgba(255,255,255,.6);">A milestone year — expanding our Interior Designing Service for homes and cementing our place as industry leaders.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Awards -->
+          <div class="container" style="padding: 80px 15px;">
+            <div class="text-center mb-6">
+              <p class="section-label">Recognition</p>
+              <h2 class="font-secondary" style="font-size:42px; font-weight:700; color:#1d2c4c;">Awards & Accolades</h2>
+            </div>
+            <div class="row col-mb-20">
+              <div class="col-md-6">
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Best Residential Design 2023</h6><span>Asia Interior Design Awards, Singapore</span></div></div>
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Sustainable Design Excellence 2022</h6><span>Green Building Council of India</span></div></div>
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Emerging Studio of the Year 2015</h6><span>ASID India Chapter, New Delhi</span></div></div>
+              </div>
+              <div class="col-md-6">
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Luxury Hospitality Design 2021</h6><span>Hospitality Design Awards, Mumbai</span></div></div>
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Best Commercial Interior 2019</h6><span>Confederation of Indian Industry Design Summit</span></div></div>
+                <div class="award-badge"><i class="bi-trophy-fill"></i><div><h6>Innovation in Materials 2020</h6><span>Material World Forum, Bangalore</span></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div class="container">
+          <div class="footer-widgets-wrap">
+            <div class="row col-mb-50">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
+                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                  <div class="app-links">
+                    <p>Follow Us</p>
+                    <a href="#" class="link"><i class="bi-instagram"></i> <span>Instagram</span></a><br />
+                    <a href="#" class="link"><i class="bi-facebook"></i> <span>Facebook</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Residential Design</a></li>
+                    <li><a href="#">Apartment Interiors</a></li>
+                    <li><a href="#">3D Visualization</a></li>
+                    <li><a href="#">Renovation Consulting</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Company</h4>
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4>Get In Touch</h4>
+                  <address style="font-style:normal; color:#525975; font-size:15px; font-weight:300; line-height:1.8;">
+                    Bengaluru, Karnataka<br />
+                    Working Days: Monday - Sunday<br />
+                    <a href="tel:+914023456789" style="color:#1c85e8;">+91 40 2345 6789</a><br />
+                    <a href="mailto:hello@pragathi.in" style="color:#1c85e8;">hello@pragathi.in</a>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line m-0"></div>
+        <div id="copyrights" style="background-color: #fff">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+  </body>
+</html>

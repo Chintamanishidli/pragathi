@@ -1,0 +1,511 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Contact Pragathi Home Solutions — book a free consultation or visit our Bengaluru studio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Pragathi Home Solutions</title>
+    <style>
+      .contact-hero {
+        background: url("assets/interior-design/images/section/1.jpg") center center no-repeat;
+        background-size: cover;
+        padding: 110px 0 80px;
+        position: relative;
+      }
+      .contact-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10,20,50,0.65);
+      }
+      .contact-hero .container { position: relative; z-index: 2; }
+      .section-label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        color: #1c85e8;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .contact-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 32px 28px;
+        box-shadow: 0 8px 32px rgba(0,0,0,.07);
+        margin-bottom: 24px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        transition: transform .3s ease, box-shadow .3s ease;
+      }
+      .contact-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 48px rgba(28,133,232,.15);
+      }
+      .contact-card-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #1c85e8, #1d2c4c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 54px;
+      }
+      .contact-card-icon i { font-size: 22px; color: #fff; }
+      .contact-card-body h5 { font-size: 16px; font-weight: 500; color: #1d2c4c; margin: 0 0 4px; }
+      .contact-card-body p, .contact-card-body a { font-size: 15px; color: #666; font-weight: 300; margin: 0; text-decoration: none; }
+      .contact-card-body a:hover { color: #1c85e8; }
+      .contact-form-wrap {
+        background: #fff;
+        border-radius: 16px;
+        padding: 50px 45px;
+        box-shadow: 0 20px 60px rgba(0,0,0,.1);
+      }
+      .form-label-custom {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #1d2c4c;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .form-input-custom {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e8edf5;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        color: #333;
+        background: #f8faff;
+        transition: border-color .3s, box-shadow .3s;
+        outline: none;
+        margin-bottom: 20px;
+      }
+      .form-input-custom:focus {
+        border-color: #1c85e8;
+        box-shadow: 0 0 0 3px rgba(28,133,232,.1);
+        background: #fff;
+      }
+      .form-input-custom.textarea { height: 140px; resize: vertical; }
+      .submit-btn {
+        background: linear-gradient(135deg, #1c85e8, #1d2c4c);
+        color: #fff;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity .3s, transform .2s;
+        width: 100%;
+        letter-spacing: .5px;
+      }
+      .submit-btn:hover { opacity: .9; transform: translateY(-2px); }
+      .service-select-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .service-chip {
+        border: 2px solid #e8edf5;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #555;
+        cursor: pointer;
+        text-align: center;
+        transition: all .3s;
+        background: #f8faff;
+        font-family: 'Rubik', sans-serif;
+        user-select: none;
+      }
+      .service-chip.selected { border-color: #1c85e8; background: #e8f3ff; color: #1c85e8; font-weight: 500; }
+      .success-msg {
+        display: none;
+        background: #e8f5e9;
+        border: 1px solid #81c784;
+        border-radius: 8px;
+        padding: 16px 20px;
+        color: #2e7d32;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .map-placeholder {
+        width: 100%;
+        height: 380px;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #e8edf5;
+        position: relative;
+      }
+      .map-placeholder iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .office-hour-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 15px;
+      }
+      .office-hour-row:last-child { border-bottom: none; }
+      .office-hour-row span:first-child { color: #555; font-weight: 400; }
+      .office-hour-row span:last-child { color: #1d2c4c; font-weight: 500; }
+    </style>
+  </head>
+
+  <body class="stretched side-push-panel">
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="#"><i class="bi-x-lg"></i></a>
+      </div>
+      <div class="side-panel-wrap">
+        <div class="widget">
+          <h4 class="fw-normal">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <div id="logo" class="me-lg-0">
+                <a href="index.html">
+                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                </a>
+              </div>
+              <div class="header-misc">
+                <div id="side-panel-trigger" class="side-panel-trigger">
+                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
+                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="studio.html"><div>Studio</div></a>
+                    <ul class="sub-menu-container">
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item current"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Hero -->
+      <section class="contact-hero">
+        <div class="container text-center text-white">
+          <p class="section-label" style="color:rgba(255,255,255,.6)">Let's Create Together</p>
+          <h1 class="font-secondary" style="font-size:58px; font-weight:900; margin-bottom:14px;">Get In Touch</h1>
+          <p style="font-weight:300; opacity:.8; max-width:540px; margin:0 auto; font-size:18px;">
+            Ready to transform your space? Tell us about your project and we'll get back to you within 24 hours.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap">
+          <div class="container" style="padding: 70px 15px;">
+            <div class="row col-mb-50">
+
+              <!-- Contact Info -->
+              <div class="col-lg-5">
+                <p class="section-label">Our Details</p>
+                <h2 class="font-secondary" style="font-size:38px; font-weight:700; color:#1d2c4c; margin-bottom:30px;">We'd love to<br />hear from you.</h2>
+
+                <div class="contact-card">
+                  <div class="contact-card-icon"><i class="bi-geo-alt-fill"></i></div>
+                  <div class="contact-card-body">
+                    <h5>Visit Our Studio</h5>
+                    <p>Bengaluru, Karnataka</p>
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-card-icon"><i class="bi-telephone-fill"></i></div>
+                  <div class="contact-card-body">
+                    <h5>Call Us</h5>
+                    <a href="tel:+914023456789">+91 40 2345 6789</a><br />
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-card-icon"><i class="bi-envelope-fill"></i></div>
+                  <div class="contact-card-body">
+                    <h5>Email Us</h5>
+                    <a href="mailto:hello@pragathi.in">hello@pragathi.in</a><br />
+                    <a href="mailto:projects@pragathi.in">projects@pragathi.in</a>
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-card-icon"><i class="bi-clock-fill"></i></div>
+                  <div class="contact-card-body">
+                    <h5>Studio Hours</h5>
+                    <div class="office-hour-row"><span>Monday – Friday</span><span>9:00 AM – 7:00 PM</span></div>
+                    <div class="office-hour-row"><span>Saturday</span><span>10:00 AM – 5:00 PM</span></div>
+                    <div class="office-hour-row"><span>Sunday</span><span>By Appointment</span></div>
+                  </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-4">
+                  <p style="font-size:13px; font-weight:500; color:#999; text-transform:uppercase; letter-spacing:2px; margin-bottom:12px;">Follow Our Work</p>
+                  <div class="d-flex gap-3">
+                    <a href="#" style="width:42px;height:42px;border-radius:50%;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#1c85e8;font-size:18px;transition:all .3s;" onmouseover="this.style.background='#1c85e8';this.style.color='#fff'" onmouseout="this.style.background='#f0f7ff';this.style.color='#1c85e8'"><i class="bi-instagram"></i></a>
+                    <a href="#" style="width:42px;height:42px;border-radius:50%;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#1c85e8;font-size:18px;transition:all .3s;" onmouseover="this.style.background='#1c85e8';this.style.color='#fff'" onmouseout="this.style.background='#f0f7ff';this.style.color='#1c85e8'"><i class="bi-facebook"></i></a>
+                    <a href="#" style="width:42px;height:42px;border-radius:50%;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#1c85e8;font-size:18px;transition:all .3s;" onmouseover="this.style.background='#1c85e8';this.style.color='#fff'" onmouseout="this.style.background='#f0f7ff';this.style.color='#1c85e8'"><i class="bi-pinterest"></i></a>
+                    <a href="#" style="width:42px;height:42px;border-radius:50%;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#1c85e8;font-size:18px;transition:all .3s;" onmouseover="this.style.background='#1c85e8';this.style.color='#fff'" onmouseout="this.style.background='#f0f7ff';this.style.color='#1c85e8'"><i class="bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div class="col-lg-7">
+                <div class="contact-form-wrap">
+                  <p class="section-label">Free Consultation</p>
+                  <h3 class="font-secondary" style="font-size:32px; font-weight:700; color:#1d2c4c; margin-bottom:28px;">Book a Design Consultation</h3>
+
+                  <div class="success-msg" id="contact-success">
+                    <i class="bi-check-circle-fill me-2"></i> Thank you! We've received your message and will contact you within 24 hours.
+                  </div>
+
+                  <form id="contact-form" novalidate>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="form-label-custom" for="contact-name">Full Name *</label>
+                        <input type="text" id="contact-name" class="form-input-custom" placeholder="e.g. Geeta Patel" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-custom" for="contact-email">Email Address *</label>
+                        <input type="email" id="contact-email" class="form-input-custom" placeholder="e.g. geeta@email.com" required />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="form-label-custom" for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" class="form-input-custom" placeholder="+91 XXXXX XXXXX" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-custom" for="contact-city">City</label>
+                        <input type="text" id="contact-city" class="form-input-custom" placeholder="e.g. Bengaluru" />
+                      </div>
+                    </div>
+
+                    <label class="form-label-custom">Service Required</label>
+                    <div class="service-select-grid">
+                      <div class="service-chip" onclick="toggleService(this)">🏠 Residential Design</div>
+                      <div class="service-chip" onclick="toggleService(this)">🏢 Apartment Interiors</div>
+                      <div class="service-chip" onclick="toggleService(this)">🎨 3D Visualization</div>
+                      <div class="service-chip" onclick="toggleService(this)">🔨 Renovation</div>
+                      <div class="service-chip" onclick="toggleService(this)">🛋️ Furniture Sourcing</div>
+                      <div class="service-chip" onclick="toggleService(this)">🧿 Vastu Consultation</div>
+                    </div>
+
+                    <label class="form-label-custom" for="contact-budget">Project Budget (₹ Approx.)</label>
+                    <select id="contact-budget" class="form-input-custom">
+                      <option value="">— Select Budget Range —</option>
+                      <option>₹5L – ₹15L</option>
+                      <option>₹15L – ₹30L</option>
+                      <option>₹30L – ₹60L</option>
+                      <option>₹60L – ₹1Cr</option>
+                      <option>₹1Cr and above</option>
+                    </select>
+
+                    <label class="form-label-custom" for="contact-message">Tell us about your project *</label>
+                    <textarea id="contact-message" class="form-input-custom textarea" placeholder="Describe your space, style preferences, and what you'd like to achieve..."></textarea>
+
+                    <button type="submit" class="submit-btn" id="contact-submit">
+                      <i class="bi-send me-2"></i> Send My Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div style="background:#f8f9fd; padding:60px 0 0;">
+            <div class="container" style="padding-bottom:0;">
+              <div class="text-center mb-5">
+                <p class="section-label">Our Location</p>
+                <h2 class="font-secondary" style="font-size:38px; font-weight:700; color:#1d2c4c;">Find Our Studio</h2>
+              </div>
+              <div class="map-placeholder">
+                <!-- Embedded OpenStreetMap centered on Bengaluru -->
+                <iframe 
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=77.5800%2C12.9600%2C77.6100%2C12.9800&layer=mapnik"
+                  title="Pragathi Studio Location" 
+                  loading="lazy"
+                  style="border-radius:12px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regional Offices -->
+          <div style="background:#f8f9fd; padding:60px 0 70px;">
+            <div class="container">
+              <div class="text-center mb-5">
+                <p class="section-label">Offices Across India</p>
+                <h3 class="font-secondary" style="font-size:34px; font-weight:700; color:#1d2c4c;">Regional Offices</h3>
+              </div>
+              <div class="row col-mb-24 justify-content-center">
+                <div class="col-md-4">
+                  <div class="contact-card">
+                    <div class="contact-card-icon"><i class="bi-building"></i></div>
+                    <div class="contact-card-body">
+                      <h5>Mumbai Office</h5>
+                      <p>Bandra Kurla Complex, Mumbai — 400051<br /><a href="tel:+912223456789">+91 22 2345 6789</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="contact-card">
+                    <div class="contact-card-icon"><i class="bi-building"></i></div>
+                    <div class="contact-card-body">
+                      <h5>Bangalore Office</h5>
+                      <p>Indiranagar, Bangalore — 560038<br /><a href="tel:+918023456789">+91 80 2345 6789</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="contact-card">
+                    <div class="contact-card-icon"><i class="bi-building"></i></div>
+                    <div class="contact-card-body">
+                      <h5>Delhi NCR Office</h5>
+                      <p>Connaught Place, New Delhi — 110001<br /><a href="tel:+911123456789">+91 11 2345 6789</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div class="container">
+          <div class="footer-widgets-wrap">
+            <div class="row col-mb-50">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
+                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Residential Design</a></li>
+                    <li><a href="#">Apartment Interiors</a></li>
+                    <li><a href="#">3D Visualization</a></li>
+                    <li><a href="#">Renovation Consulting</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Company</h4>
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4>Get In Touch</h4>
+                  <address style="font-style:normal; color:#525975; font-size:15px; font-weight:300; line-height:1.8;">
+                    Bengaluru, Karnataka<br />
+                    Working Days: Monday - Sunday<br />
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line m-0"></div>
+        <div id="copyrights" style="background-color: #fff">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+    <script>
+      function toggleService(el) {
+        el.classList.toggle('selected');
+      }
+
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('contact-submit');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        setTimeout(() => {
+          document.getElementById('contact-success').style.display = 'block';
+          this.reset();
+          document.querySelectorAll('.service-chip').forEach(c => c.classList.remove('selected'));
+          btn.innerHTML = '<i class="bi-send me-2"></i> Send My Message';
+          btn.disabled = false;
+          window.scrollTo({ top: document.getElementById('contact-success').offsetTop - 100, behavior: 'smooth' });
+        }, 1200);
+      });
+    </script>
+  </body>
+</html>

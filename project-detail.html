@@ -1,0 +1,600 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Explore a detailed case study of our featured interior design project — Pragathi Studio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Detail | Pragathi Home Solutions</title>
+    <style>
+      .project-hero {
+        height: 85vh;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+      }
+      .project-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+      }
+      .project-hero-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 50px 0;
+      }
+      .project-tag {
+        display: inline-block;
+        background: rgba(28,133,232,.9);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 3px;
+        margin-bottom: 14px;
+      }
+      .section-label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        color: #1c85e8;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .project-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1px;
+        background: #eef0f6;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 40px 0;
+      }
+      .meta-cell {
+        background: #fff;
+        padding: 24px 28px;
+      }
+      .meta-cell .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #999; font-weight: 500; margin-bottom: 6px; }
+      .meta-cell .value { font-size: 17px; font-weight: 500; color: #1d2c4c; }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        margin: 40px 0;
+      }
+      .gallery-grid img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform .4s ease, filter .4s;
+        display: block;
+      }
+      .gallery-grid img:hover { transform: scale(1.03); filter: brightness(1.05); }
+      .gallery-grid .span-2 { grid-column: span 2; }
+      .gallery-grid .span-2 img { height: 360px; }
+      .challenge-card {
+        border-left: 3px solid #1c85e8;
+        padding: 20px 24px;
+        background: #f8f9fd;
+        border-radius: 0 8px 8px 0;
+        margin-bottom: 16px;
+      }
+      .challenge-card h6 { font-size: 15px; font-weight: 500; color: #1d2c4c; margin-bottom: 6px; }
+      .challenge-card p { font-size: 14px; color: #777; font-weight: 300; margin: 0; }
+      .result-num {
+        font-family: 'Playfair Display', serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: #1c85e8;
+        line-height: 1;
+      }
+      .result-label { font-size: 15px; color: #555; font-weight: 300; margin-top: 6px; }
+      .lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox-overlay.active { display: flex; }
+      .lightbox-overlay img { max-width: 90vw; max-height: 85vh; border-radius: 4px; }
+      .lightbox-close { position: fixed; top: 20px; right: 28px; color: #fff; font-size: 32px; cursor: pointer; z-index: 10000; }
+      .related-card {
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 24px;
+      }
+      .related-card img { width: 100%; height: 220px; object-fit: cover; transition: transform .4s; display: block; }
+      .related-card:hover img { transform: scale(1.05); }
+      .related-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        color: #fff;
+        padding: 30px 20px 16px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .process-step {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 28px;
+        align-items: flex-start;
+      }
+      .step-num {
+        min-width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #1c85e8;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+        font-family: 'Playfair Display', serif;
+      }
+      .step-body h6 { color: #1d2c4c; font-size: 17px; font-weight: 500; margin: 0 0 5px; }
+      .step-body p { color: #777; font-size: 14px; font-weight: 300; margin: 0; }
+      @media (max-width: 768px) {
+        .gallery-grid { grid-template-columns: 1fr 1fr; }
+        .gallery-grid .span-2 { grid-column: 1; }
+      }
+    </style>
+  </head>
+
+  <body class="stretched side-push-panel">
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="#"><i class="bi-x-lg"></i></a>
+      </div>
+      <div class="side-panel-wrap">
+        <div class="widget">
+          <h4 class="fw-normal">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="studio.html">Studio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()"><i class="bi-x-lg"></i></span>
+      <img src="" id="lightbox-img" alt="Project image" />
+    </div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <div id="logo" class="me-lg-0">
+                <a href="index.html">
+                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                </a>
+              </div>
+              <div class="header-misc">
+                <div id="side-panel-trigger" class="side-panel-trigger">
+                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
+                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item current"><a class="menu-link" href="studio.html"><div>Studio</div></a>
+                    <ul class="sub-menu-container">
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Hero — populated by JS -->
+      <section class="project-hero" id="project-hero">
+        <div class="project-hero-inner">
+          <div class="container">
+            <a href="studio.html" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-bottom:16px;">
+              <i class="bi-arrow-left"></i> Back to Studio
+            </a>
+            <div class="project-tag" id="project-tag">Residential · Luxury</div>
+            <h1 class="font-secondary text-white" id="project-title" style="font-size:58px; font-weight:900; margin-bottom:0;"></h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap">
+          <div class="container" style="padding: 60px 15px;">
+
+            <!-- Meta -->
+            <div class="project-meta-grid" id="project-meta"></div>
+
+            <!-- Overview -->
+            <div class="row col-mb-50 align-items-start">
+              <div class="col-lg-7">
+                <p class="section-label">Project Overview</p>
+                <h2 class="font-secondary" style="font-size:38px; font-weight:700; color:#1d2c4c; margin-bottom:20px;" id="overview-heading"></h2>
+                <div id="overview-text" style="font-size:16px; color:#555; font-weight:300; line-height:1.9;"></div>
+              </div>
+              <div class="col-lg-4 offset-lg-1">
+                <p class="section-label">Design Process</p>
+                <div id="process-steps"></div>
+              </div>
+            </div>
+
+            <!-- Gallery -->
+            <p class="section-label">Project Gallery</p>
+            <div class="gallery-grid" id="project-gallery"></div>
+
+            <!-- Challenges & Results -->
+            <div class="row col-mb-50 mt-5">
+              <div class="col-lg-6">
+                <p class="section-label">Challenges & Solutions</p>
+                <h3 class="font-secondary" style="font-size:32px; font-weight:700; color:#1d2c4c; margin-bottom:24px;">How We Solved It</h3>
+                <div id="challenges"></div>
+              </div>
+              <div class="col-lg-5 offset-lg-1">
+                <p class="section-label">Results</p>
+                <h3 class="font-secondary" style="font-size:32px; font-weight:700; color:#1d2c4c; margin-bottom:30px;">The Impact</h3>
+                <div class="row" id="results"></div>
+              </div>
+            </div>
+
+            <!-- Client Testimonial -->
+            <div style="background: linear-gradient(135deg, #1d2c4c 0%, #1c85e8 100%); padding: 50px 60px; border-radius: 16px; margin: 40px 0;" id="testimonial-wrap">
+              <div style="font-size:60px; color:rgba(255,255,255,.2); line-height:1; margin-bottom:-10px; font-family:'Playfair Display',serif;">"</div>
+              <p style="color:#fff; font-size:20px; font-weight:300; line-height:1.8; margin-bottom:24px;" id="testimonial-text"></p>
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center;">
+                  <i class="bi-person-fill" style="color:#fff; font-size:22px;"></i>
+                </div>
+                <div>
+                  <div style="color:#fff; font-weight:500; font-size:16px;" id="testimonial-author"></div>
+                  <div style="color:rgba(255,255,255,.6); font-size:13px;" id="testimonial-role"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Related Projects -->
+          <div style="background:#f8f9fd; padding:70px 0;">
+            <div class="container">
+              <p class="section-label text-center">More Projects</p>
+              <h2 class="font-secondary text-center" style="font-size:38px; font-weight:700; color:#1d2c4c; margin-bottom:40px;">Related Work</h2>
+              <div class="row col-mb-24" id="related-projects"></div>
+              <div class="text-center mt-4">
+                <a href="studio.html" class="button button-rounded ms-0" style="background:#1c85e8; color:#fff;">View All Projects</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div class="container">
+          <div class="footer-widgets-wrap">
+            <div class="row col-mb-50">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
+                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Residential Design</a></li>
+                    <li><a href="#">Apartment Interiors</a></li>
+                    <li><a href="#">3D Visualization</a></li>
+                    <li><a href="#">Renovation Consulting</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget_links widget-li-noicon">
+                  <h4>Company</h4>
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4>Start a Project</h4>
+                  <p style="font-size:14px; color:#777; font-weight:300; margin-bottom:14px;">Ready to transform your space?</p>
+                  <a href="contact.html" class="button button-rounded ms-0 button-small" style="background:#1c85e8; color:#fff;">Book Free Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line m-0"></div>
+        <div id="copyrights" style="background-color: #fff">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+    <script>
+    // ── Project Data ──────────────────────────────────────────────────────────────
+    const BASE = 'assets/interior-design/images/';
+    const projects = {
+      minskbelarus: {
+        title: 'Minsk Belarus Studio',
+        tag: 'Residential · Luxury',
+        hero: BASE + 'single/11.jpg',
+        location: 'Minsk, Belarus',
+        area: '320 sq m',
+        year: '2021',
+        lead: 'Priya Sharma',
+        duration: '8 Months',
+        style: 'Luxury Minimalist',
+        overviewH: 'An International Commission Across Borders',
+        overviewText: `<p>Our most celebrated international project, the Minsk Belarus Studio is a 320 sq-m luxury residential space for a tech entrepreneur and his family. The brief: create a home that feels warm and lived-in yet exudes world-class sophistication.</p><p>We drew inspiration from Baltic modernism — clean lines, natural materials, and a palette of warm whites, aged brass, and dark oak — to design a space that feels timeless yet unmistakably contemporary.</p><p>Key highlights include a custom bespoke kitchen with integrated Gaggenau appliances, a 24-foot gallery wall, a reading room with floor-to-ceiling walnut shelving, and a master suite featuring a freestanding stone bathtub.</p>`,
+        gallery: [
+          BASE+'single/1.jpg', BASE+'single/2.jpg', BASE+'single/3.jpg',
+          BASE+'single/4.jpg', BASE+'single/5.jpg', BASE+'single/6.jpg',
+        ],
+        challenges: [
+          { title: 'Remote Project Management', body: 'Managed the entire project remotely using BIM software and weekly video walkthroughs, coordinating a local Minsk contractor team from Bengaluru.' },
+          { title: 'Sourcing Premium Materials', body: 'Procured Italian marble, Austrian linen, and locally-crafted oak cabinetry that met our quality standards while adhering to Belarusian import regulations.' },
+          { title: 'Climate Considerations', body: 'Designed an underfloor heating system and triple-glazed windows to ensure comfort during Minsk's harsh winters without compromising aesthetics.' },
+        ],
+        results: [
+          { num: '8', label: 'Months to Complete' },
+          { num: '12', label: 'Awards Shortlisted' },
+          { num: '98%', label: 'Client Satisfaction' },
+          { num: '3', label: 'Media Features' },
+        ],
+        testimonial: `Working with Pragathi was a revelation. They understood our aesthetic from the first conversation — and delivered something even more beautiful than we imagined. Managing a project of this scale from India to Belarus was ambitious, but they made it seamless.`,
+        testimonialAuthor: 'Aleksei Voronov',
+        testimonialRole: 'Client, Minsk Belarus Studio',
+        related: ['malibu','moderncondo','skyline'],
+      },
+      malibu: {
+        title: 'Malibu Dream Airstream',
+        tag: 'Hospitality · Luxury',
+        hero: BASE + 'single/9.jpg',
+        location: 'Malibu, California',
+        area: '85 sq m',
+        year: '2022',
+        lead: 'Kavitha Reddy',
+        duration: '4 Months',
+        style: 'Coastal Luxe',
+        overviewH: 'A Boutique Retreat on the California Coast',
+        overviewText: `<p>The Malibu Dream Airstream is a luxury micro-hospitality experience — a 85 sq-m Airstream trailer transformed into a premium coastal retreat overlooking the Pacific Ocean.</p><p>Every square inch was reimagined: custom marine-grade oak cabinetry, hand-woven Oaxacan textiles, Italian linen window treatments, and a rooftop terrace decked in teak with a rainforest shower.</p><p>The project required close collaboration with Airstream's engineers to ensure structural integrity while achieving the look of a curated boutique hotel suite. The result earned features in Architectural Digest and Condé Nast Traveller.</p>`,
+        gallery: [
+          BASE+'single/7.jpg', BASE+'single/8.jpg', BASE+'single/9.jpg',
+          BASE+'single/10.jpg', BASE+'single/11.jpg', BASE+'single/12.jpg',
+        ],
+        challenges: [
+          { title: 'Structural Constraints', body: 'Every design decision had to account for the trailer\'s weight limits and curved walls — requiring custom-designed furniture and bespoke joinery.' },
+          { title: 'Space Optimization', body: 'Hidden storage solutions, fold-down furniture, and a convertible dining-to-living layout made 85 sq-m feel like 120.' },
+          { title: 'Coastal Durability', body: 'All materials were specified for salt-air resistance — marine-grade metals, UV-stable fabrics, and sealed hardwood floors.' },
+        ],
+        results: [
+          { num: '4', label: 'Months to Complete' },
+          { num: '2', label: 'Magazine Features' },
+          { num: '100%', label: 'Booking Rate (1 Year)' },
+          { num: '$850', label: 'Per Night Rate' },
+        ],
+        testimonial: `The Airstream went from a quirky idea to the most-booked property in our portfolio. Pragathi brought a level of detail and sophistication I didn't think was possible in 85 square metres. Truly world-class work.`,
+        testimonialAuthor: 'Jordan Mitchell',
+        testimonialRole: 'Owner, Malibu Dream Properties',
+        related: ['minskbelarus','moderncondo','azure'],
+      },
+      moderncondo: {
+        title: 'Modern Condo in City',
+        tag: 'Residential · Contemporary',
+        hero: BASE + 'single/3.jpg',
+        location: 'Bengaluru, Karnataka',
+        area: '240 sq m',
+        year: '2023',
+        lead: 'Arjun Mehta',
+        duration: '6 Months',
+        style: 'Urban Contemporary',
+        overviewH: 'Redefining Urban Living in Bengaluru',
+        overviewText: `<p>The Modern Condo project is one of our most requested case studies — a 4BHK penthouse apartment in Bengaluru, Karnataka, that needed to balance family-friendly functionality with high-end aesthetics.</p><p>The client — a young family of four — wanted a space that was open, playful for the kids, sophisticated for entertaining, and deeply personal. We delivered all four.</p><p>A semi-open kitchen with an island, a kids' room featuring a custom forest mural and loft bed, a home office with hidden storage, and a double-height living room with a kinetic chandelier were among the highlights of this landmark project.</p>`,
+        gallery: [
+          BASE+'single/1.jpg', BASE+'single/2.jpg', BASE+'single/3.jpg',
+          BASE+'single/4.jpg', BASE+'single/13.jpg', BASE+'single/6.jpg',
+        ],
+        challenges: [
+          { title: 'Family vs. Aesthetics', body: 'Balancing a design-show look with child-safe, durable materials — every surface was chosen for both beauty and practicality.' },
+          { title: 'Vertical Flow', body: 'Creating visual continuity across a double-height space required careful study of sight lines, lighting, and material repetition.' },
+          { title: 'Budget Optimisation', body: 'Mixing luxury pieces with locally-crafted alternatives allowed us to achieve a premium look within the client\'s budget.' },
+        ],
+        results: [
+          { num: '6', label: 'Months to Complete' },
+          { num: '40%', label: 'Natural Light Increase' },
+          { num: '₹2.2Cr', label: 'Property Value Added' },
+          { num: '5★', label: 'Client Rating' },
+        ],
+        testimonial: `Pragathi understood us from day one. They designed a home that works for our hectic family life while looking like it belongs in a design magazine. The kids love their room, my husband loves his office, and I'm in love with every corner of it.`,
+        testimonialAuthor: 'Deepika Reddy',
+        testimonialRole: 'Homeowner, Bengaluru',
+        related: ['minskbelarus','malibu','urbanloft'],
+      },
+    };
+
+    // Fallback for unknown project IDs
+    const defaultProject = projects.minskbelarus;
+
+    // ── Process Steps (same across all projects) ────────────────────────────────
+    const processSteps = [
+      { n:1, title:'Discovery Call', desc:'Understanding client vision, lifestyle & aspirations' },
+      { n:2, title:'Concept Design', desc:'Mood boards, material palettes, style direction' },
+      { n:3, title:'3D Renders', desc:'Photorealistic visualizations for approval' },
+      { n:4, title:'Procurement', desc:'Sourcing furniture, materials & custom pieces' },
+      { n:5, title:'Execution', desc:'On-site installation & quality supervision' },
+      { n:6, title:'Handover', desc:'Styled photography & final walkthrough' },
+    ];
+
+    // ── Related project data ────────────────────────────────────────────────────
+    const relatedData = {
+      minskbelarus: { title:'Minsk Belarus Studio', img: BASE+'single/11.jpg' },
+      malibu: { title:'Malibu Dream Airstream', img: BASE+'single/9.jpg' },
+      moderncondo: { title:'Modern Condo in City', img: BASE+'single/3.jpg' },
+      skyline: { title:'Skyline Office Hub', img: BASE+'studios/4.jpg' },
+      azure: { title:'Azure Boutique Hotel', img: BASE+'studios/5.jpg' },
+      urbanloft: { title:'Urban Loft Transformation', img: BASE+'studios/12.jpg' },
+    };
+
+    // ── Render page ─────────────────────────────────────────────────────────────
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('project') || 'minskbelarus';
+    const p = projects[key] || defaultProject;
+
+    // Update title
+    document.title = p.title + ' | Pragathi Home Solutions';
+
+    // Hero
+    document.getElementById('project-hero').style.backgroundImage = `url('${p.hero}')`;
+    document.getElementById('project-tag').textContent = p.tag;
+    document.getElementById('project-title').textContent = p.title;
+
+    // Meta
+    const metaEl = document.getElementById('project-meta');
+    const metas = [
+      { label:'Location', value: p.location },
+      { label:'Project Area', value: p.area },
+      { label:'Year', value: p.year },
+      { label:'Style', value: p.style },
+      { label:'Lead Designer', value: p.lead },
+      { label:'Duration', value: p.duration },
+    ];
+    metaEl.innerHTML = metas.map(m => `
+      <div class="meta-cell">
+        <div class="label">${m.label}</div>
+        <div class="value">${m.value}</div>
+      </div>`).join('');
+
+    // Overview
+    document.getElementById('overview-heading').textContent = p.overviewH;
+    document.getElementById('overview-text').innerHTML = p.overviewText;
+
+    // Process Steps
+    document.getElementById('process-steps').innerHTML = processSteps.map(s => `
+      <div class="process-step">
+        <div class="step-num">${s.n}</div>
+        <div class="step-body"><h6>${s.title}</h6><p>${s.desc}</p></div>
+      </div>`).join('');
+
+    // Gallery
+    const galleryEl = document.getElementById('project-gallery');
+    galleryEl.innerHTML = p.gallery.map((src, i) => `
+      <div class="${i===0?'span-2':''}">
+        <img src="${src}" alt="Project image ${i+1}" onclick="openLightbox('${src}')" />
+      </div>`).join('');
+
+    // Challenges
+    document.getElementById('challenges').innerHTML = p.challenges.map(c => `
+      <div class="challenge-card">
+        <h6><i class="bi-lightning-charge-fill" style="color:#1c85e8; margin-right:6px;"></i>${c.title}</h6>
+        <p>${c.body}</p>
+      </div>`).join('');
+
+    // Results
+    document.getElementById('results').innerHTML = p.results.map(r => `
+      <div class="col-6 mb-4 text-center">
+        <div class="result-num">${r.num}</div>
+        <div class="result-label">${r.label}</div>
+      </div>`).join('');
+
+    // Testimonial
+    document.getElementById('testimonial-text').textContent = p.testimonial;
+    document.getElementById('testimonial-author').textContent = p.testimonialAuthor;
+    document.getElementById('testimonial-role').textContent = p.testimonialRole;
+
+    // Related
+    document.getElementById('related-projects').innerHTML = p.related.map(rel => {
+      const rd = relatedData[rel] || relatedData.minskbelarus;
+      return `
+      <div class="col-md-4">
+        <div class="related-card">
+          <a href="project-detail.html?project=${rel}">
+            <img src="${rd.img}" alt="${rd.title}" />
+            <div class="related-label">${rd.title}</div>
+          </a>
+        </div>
+      </div>`;
+    }).join('');
+
+    // Lightbox
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+    window.openLightbox = openLightbox;
+    window.closeLightbox = closeLightbox;
+    </script>
+  </body>
+</html>
