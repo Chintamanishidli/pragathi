@@ -1,0 +1,244 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Sign In to your Pragathi Home Solutions account." />
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <!-- Core Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sign In | Pragathi Home Solutions</title>
+    <style>
+      .auth-section {
+        background: url("assets/interior-design/images/new-section.webp") center center no-repeat;
+        background-size: cover;
+        padding: 100px 0;
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
+      .auth-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10,20,50,0.65);
+      }
+      .auth-form-wrap {
+        background: #fff;
+        border-radius: 16px;
+        padding: 50px 45px;
+        box-shadow: 0 20px 60px rgba(0,0,0,.2);
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      .form-label-custom {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #1d2c4c;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .form-input-custom {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e8edf5;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        color: #333;
+        background: #f8faff;
+        transition: border-color .3s, box-shadow .3s;
+        outline: none;
+        margin-bottom: 20px;
+      }
+      .form-input-custom:focus {
+        border-color: #1c85e8;
+        box-shadow: 0 0 0 3px rgba(28,133,232,.1);
+        background: #fff;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, #1c85e8, #1d2c4c);
+        color: #fff;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity .3s, transform .2s;
+        width: 100%;
+        letter-spacing: .5px;
+      }
+      .submit-btn:hover { opacity: .9; transform: translateY(-2px); }
+      .auth-alert {
+        display: none;
+        padding: 14px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .auth-error {
+        background: #ffebee;
+        color: #c62828;
+        border: 1px solid #ef9a9a;
+      }
+      .auth-success {
+        background: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #81c784;
+      }
+      .auth-switch {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14.5px;
+        color: #666;
+      }
+      .auth-switch a {
+        color: #1c85e8;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .auth-switch a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body class="stretched">
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <!-- Logo -->
+              <div id="logo" class="me-lg-0">
+                <a href="index.html" class="text-dark font-secondary fw-bold" style="font-size: 32px; letter-spacing: -1px; text-decoration: none;">
+                  Pragathi<span style="color: #1c85e8;">.</span>
+                </a>
+              </div>
+              <div class="header-misc">
+                <!-- empty for clean look or add back the side panel trigger -->
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <!-- Primary Navigation -->
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="studio.html"><div>Studio</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Auth Section -->
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-form-wrap">
+            <h3 class="font-secondary text-center" style="font-size:32px; font-weight:700; color:#1d2c4c; margin-bottom:10px;">Welcome Back</h3>
+            <p class="text-center" style="color:#666; font-size:15px; margin-bottom:30px;">Sign in to your account</p>
+
+            <div class="auth-alert auth-error" id="auth-error-msg"></div>
+            <div class="auth-alert auth-success" id="auth-success-msg"></div>
+
+            <form id="login-auth-form" novalidate>
+              <label class="form-label-custom" for="login-id">Email or Phone Number *</label>
+              <input type="text" id="login-id" class="form-input-custom" placeholder="e.g. +91 9876543210 or user@email.com" required />
+
+              <label class="form-label-custom" for="login-pass">Password *</label>
+              <input type="password" id="login-pass" class="form-input-custom" placeholder="••••••••" required />
+
+              <button type="submit" class="submit-btn" id="login-submit">Sign In</button>
+            </form>
+
+            <div class="auth-switch">
+              Don't have an account? <a href="register.html">Sign Up here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div id="copyrights" style="background-color: #fff; padding: 30px 0;">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span style="color:#555;">Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Go To Top -->
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+
+    <script>
+      document.getElementById('login-auth-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const loginId = document.getElementById('login-id').value.trim();
+        const pass = document.getElementById('login-pass').value.trim();
+        
+        const errorEl = document.getElementById('auth-error-msg');
+        const successEl = document.getElementById('auth-success-msg');
+        
+        errorEl.style.display = 'none';
+        successEl.style.display = 'none';
+
+        if (!loginId || !pass) {
+          errorEl.textContent = "Please fill in all fields.";
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        const users = JSON.parse(localStorage.getItem('pragathi_users') || '[]');
+        const user = users.find(u => (u.email === loginId || u.phone === loginId) && u.pass === pass);
+
+        if (user) {
+          localStorage.setItem('pragathi_active_user', JSON.stringify(user));
+          successEl.textContent = "Login successful! Redirecting...";
+          successEl.style.display = 'block';
+          document.getElementById('login-submit').disabled = true;
+          document.getElementById('login-submit').textContent = "Signing In...";
+          setTimeout(() => { window.location.href = 'index.html'; }, 1500);
+        } else {
+          errorEl.textContent = "Invalid email/phone number or password.";
+          errorEl.style.display = 'block';
+        }
+      });
+    </script>
+  </body>
+</html>

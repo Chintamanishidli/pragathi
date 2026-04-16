@@ -1,0 +1,286 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="description" content="Sign Up for a Pragathi Home Solutions account." />
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <!-- Core Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="stylesheet" href="assets/interior-design/interior-design.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sign Up | Pragathi Home Solutions</title>
+    <style>
+      .auth-section {
+        background: url("assets/interior-design/images/new-section.webp") center center no-repeat;
+        background-size: cover;
+        padding: 100px 0;
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
+      .auth-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10,20,50,0.65);
+      }
+      .auth-form-wrap {
+        background: #fff;
+        border-radius: 16px;
+        padding: 45px;
+        box-shadow: 0 20px 60px rgba(0,0,0,.2);
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+      }
+      .form-label-custom {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #1d2c4c;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .form-input-custom {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e8edf5;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        color: #333;
+        background: #f8faff;
+        transition: border-color .3s, box-shadow .3s;
+        outline: none;
+        margin-bottom: 20px;
+      }
+      .form-input-custom:focus {
+        border-color: #1c85e8;
+        box-shadow: 0 0 0 3px rgba(28,133,232,.1);
+        background: #fff;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, #1c85e8, #1d2c4c);
+        color: #fff;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity .3s, transform .2s;
+        width: 100%;
+        letter-spacing: .5px;
+        margin-top: 10px;
+      }
+      .submit-btn:hover { opacity: .9; transform: translateY(-2px); }
+      .auth-alert {
+        display: none;
+        padding: 14px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .auth-error {
+        background: #ffebee;
+        color: #c62828;
+        border: 1px solid #ef9a9a;
+      }
+      .auth-success {
+        background: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #81c784;
+      }
+      .auth-switch {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14.5px;
+        color: #666;
+      }
+      .auth-switch a {
+        color: #1c85e8;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .auth-switch a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body class="stretched">
+
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="header-size-md" data-sticky-shrink="false">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <!-- Logo -->
+              <div id="logo" class="me-lg-0">
+                <a href="index.html" class="text-dark font-secondary fw-bold" style="font-size: 32px; letter-spacing: -1px; text-decoration: none;">
+                  Pragathi<span style="color: #1c85e8;">.</span>
+                </a>
+              </div>
+              <div class="header-misc">
+              </div>
+              <div class="primary-menu-trigger">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <!-- Primary Navigation -->
+              <nav class="primary-menu with-arrows">
+                <ul class="menu-container">
+                  <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="studio.html"><div>Studio</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="faqs.html"><div>FAQs</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="contact.html"><div>Contact</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Auth Section -->
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-form-wrap">
+            <h3 class="font-secondary text-center" style="font-size:32px; font-weight:700; color:#1d2c4c; margin-bottom:10px;">Create an Account</h3>
+            <p class="text-center" style="color:#666; font-size:15px; margin-bottom:30px;">Join Pragathi Home Solutions</p>
+
+            <div class="auth-alert auth-error" id="auth-error-msg"></div>
+            <div class="auth-alert auth-success" id="auth-success-msg"></div>
+
+            <form id="register-auth-form" novalidate>
+              <label class="form-label-custom" for="reg-name">Full Name *</label>
+              <input type="text" id="reg-name" class="form-input-custom" placeholder="e.g. Geeta Patel" required />
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label-custom" for="reg-phone">Phone Number *</label>
+                  <input type="tel" id="reg-phone" class="form-input-custom" placeholder="+91 9876543210" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom" for="reg-email">Email Address *</label>
+                  <input type="email" id="reg-email" class="form-input-custom" placeholder="user@email.com" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label-custom" for="reg-pass">Password *</label>
+                  <input type="password" id="reg-pass" class="form-input-custom" placeholder="••••••••" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom" for="reg-confirm">Confirm Password *</label>
+                  <input type="password" id="reg-confirm" class="form-input-custom" placeholder="••••••••" required />
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn" id="reg-submit">Sign Up</button>
+            </form>
+
+            <div class="auth-switch">
+              Already have an account? <a href="login.html">Sign In here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="border-0 bg-constrast-100">
+        <div id="copyrights" style="background-color: #fff; padding: 30px 0;">
+          <div class="container">
+            <div class="w-100 text-center m-0">
+              <span style="color:#555;">Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Go To Top -->
+    <div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
+
+    <script src="js/plugins.min.js"></script>
+    <script src="js/functions.bundle.js"></script>
+
+    <script>
+      document.getElementById('register-auth-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('reg-name').value.trim();
+        const phone = document.getElementById('reg-phone').value.trim();
+        const email = document.getElementById('reg-email').value.trim();
+        const pass = document.getElementById('reg-pass').value;
+        const confirmPass = document.getElementById('reg-confirm').value;
+        
+        const errorEl = document.getElementById('auth-error-msg');
+        const successEl = document.getElementById('auth-success-msg');
+        
+        errorEl.style.display = 'none';
+        successEl.style.display = 'none';
+
+        if (!name || !phone || !email || !pass || !confirmPass) {
+          errorEl.textContent = "Please fill out all fields.";
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        if (pass !== confirmPass) {
+          errorEl.textContent = "Passwords do not match.";
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        const users = JSON.parse(localStorage.getItem('pragathi_users') || '[]');
+        
+        // Check if user already exists
+        const exists = users.find(u => u.email === email || u.phone === phone);
+        if (exists) {
+            let conflictMsg = "Account is already created on this number and email.";
+            if (exists.email === email && exists.phone !== phone) {
+                conflictMsg = "Account is already created using this email address.";
+            } else if (exists.phone === phone && exists.email !== email) {
+                conflictMsg = "Account is already created using this phone number.";
+            }
+            errorEl.textContent = conflictMsg;
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        // Save new user
+        users.push({ name, phone, email, pass });
+        localStorage.setItem('pragathi_users', JSON.stringify(users));
+
+        successEl.textContent = "Account created successfully! Redirecting to Log In...";
+        successEl.style.display = 'block';
+        document.getElementById('reg-submit').disabled = true;
+        document.getElementById('reg-submit').textContent = "Creating...";
+        
+        setTimeout(() => { window.location.href = 'login.html'; }, 2000);
+      });
+    </script>
+  </body>
+</html>

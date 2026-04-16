@@ -198,14 +198,14 @@
           <div class="container">
             <div class="header-row justify-content-between">
               <div id="logo" class="me-lg-0">
-                <a href="index.html">
-                  <img class="logo-default" srcset="assets/interior-design/images/logo.png, assets/interior-design/images/logo@2x.png 2x" src="assets/interior-design/images/logo@2x.png" alt="Pragathi Logo" />
+                <a href="index.html" class="text-dark font-secondary fw-bold" style="font-size: 32px; letter-spacing: -1px; text-decoration: none;">
+                  Pragathi<span style="color: #1c85e8;">.</span>
                 </a>
               </div>
               <div class="header-misc">
-                <div id="side-panel-trigger" class="side-panel-trigger">
-                  <a href="#" class="d-block d-lg-none text-dark"><i class="bi-arrow-right"></i></a>
-                  <a href="#" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
+                <div class="side-panel-trigger">
+                  <a href="login.html" class="d-block d-lg-none text-dark"><i class="bi-box-arrow-in-right"></i></a>
+                  <a href="login.html" class="d-none d-lg-block text-dark">Sign In <i class="bi-arrow-right"></i></a>
                 </div>
               </div>
               <div class="primary-menu-trigger">
@@ -218,9 +218,12 @@
                   <li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
                   <li class="menu-item current"><a class="menu-link" href="studio.html"><div>Studio</div></a>
                     <ul class="sub-menu-container">
-                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=minskbelarus"><div>Minsk Belarus Studio</div></a></li>
-                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=malibu"><div>Malibu Dream Airstream</div></a></li>
-                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=moderncondo"><div>Modern Condo in City</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=smallapartments"><div>Small Apartment Kitchens</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=mediumhomes"><div>Medium Homes (2BHK/3BHK)</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=luxuryvillas"><div>Luxury Villas / Farmhouses</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=steelspecial"><div>Steel Kitchen Special</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=smartkitchen"><div>Smart Kitchen</div></a></li>
+                      <li class="menu-item"><a class="menu-link" href="project-detail.html?project=colortrends"><div>Color Trends</div></a></li>
                     </ul>
                   </li>
                   <li class="menu-item"><a class="menu-link" href="about.html"><div>About</div></a></li>
@@ -379,106 +382,248 @@
     // ── Project Data ──────────────────────────────────────────────────────────────
     const BASE = 'assets/interior-design/images/';
     const projects = {
-      minskbelarus: {
-        title: 'Minsk Belarus Studio',
-        tag: 'Residential · Luxury',
-        hero: BASE + 'single/11.jpg',
-        location: 'Minsk, Belarus',
-        area: '320 sq m',
-        year: '2021',
-        lead: 'Priya Sharma',
-        duration: '8 Months',
-        style: 'Luxury Minimalist',
-        overviewH: 'An International Commission Across Borders',
-        overviewText: `<p>Our most celebrated international project, the Minsk Belarus Studio is a 320 sq-m luxury residential space for a tech entrepreneur and his family. The brief: create a home that feels warm and lived-in yet exudes world-class sophistication.</p><p>We drew inspiration from Baltic modernism — clean lines, natural materials, and a palette of warm whites, aged brass, and dark oak — to design a space that feels timeless yet unmistakably contemporary.</p><p>Key highlights include a custom bespoke kitchen with integrated Gaggenau appliances, a 24-foot gallery wall, a reading room with floor-to-ceiling walnut shelving, and a master suite featuring a freestanding stone bathtub.</p>`,
-        gallery: [
-          BASE+'single/1.jpg', BASE+'single/2.jpg', BASE+'single/3.jpg',
-          BASE+'single/4.jpg', BASE+'single/5.jpg', BASE+'single/6.jpg',
-        ],
-        challenges: [
-          { title: 'Remote Project Management', body: 'Managed the entire project remotely using BIM software and weekly video walkthroughs, coordinating a local Minsk contractor team from Bengaluru.' },
-          { title: 'Sourcing Premium Materials', body: 'Procured Italian marble, Austrian linen, and locally-crafted oak cabinetry that met our quality standards while adhering to Belarusian import regulations.' },
-          { title: 'Climate Considerations', body: 'Designed an underfloor heating system and triple-glazed windows to ensure comfort during Minsk's harsh winters without compromising aesthetics.' },
-        ],
-        results: [
-          { num: '8', label: 'Months to Complete' },
-          { num: '12', label: 'Awards Shortlisted' },
-          { num: '98%', label: 'Client Satisfaction' },
-          { num: '3', label: 'Media Features' },
-        ],
-        testimonial: `Working with Pragathi was a revelation. They understood our aesthetic from the first conversation — and delivered something even more beautiful than we imagined. Managing a project of this scale from India to Belarus was ambitious, but they made it seamless.`,
-        testimonialAuthor: 'Aleksei Voronov',
-        testimonialRole: 'Client, Minsk Belarus Studio',
-        related: ['malibu','moderncondo','skyline'],
-      },
-      malibu: {
-        title: 'Malibu Dream Airstream',
-        tag: 'Hospitality · Luxury',
-        hero: BASE + 'single/9.jpg',
-        location: 'Malibu, California',
-        area: '85 sq m',
-        year: '2022',
-        lead: 'Kavitha Reddy',
-        duration: '4 Months',
-        style: 'Coastal Luxe',
-        overviewH: 'A Boutique Retreat on the California Coast',
-        overviewText: `<p>The Malibu Dream Airstream is a luxury micro-hospitality experience — a 85 sq-m Airstream trailer transformed into a premium coastal retreat overlooking the Pacific Ocean.</p><p>Every square inch was reimagined: custom marine-grade oak cabinetry, hand-woven Oaxacan textiles, Italian linen window treatments, and a rooftop terrace decked in teak with a rainforest shower.</p><p>The project required close collaboration with Airstream's engineers to ensure structural integrity while achieving the look of a curated boutique hotel suite. The result earned features in Architectural Digest and Condé Nast Traveller.</p>`,
-        gallery: [
-          BASE+'single/7.jpg', BASE+'single/8.jpg', BASE+'single/9.jpg',
-          BASE+'single/10.jpg', BASE+'single/11.jpg', BASE+'single/12.jpg',
-        ],
-        challenges: [
-          { title: 'Structural Constraints', body: 'Every design decision had to account for the trailer\'s weight limits and curved walls — requiring custom-designed furniture and bespoke joinery.' },
-          { title: 'Space Optimization', body: 'Hidden storage solutions, fold-down furniture, and a convertible dining-to-living layout made 85 sq-m feel like 120.' },
-          { title: 'Coastal Durability', body: 'All materials were specified for salt-air resistance — marine-grade metals, UV-stable fabrics, and sealed hardwood floors.' },
-        ],
-        results: [
-          { num: '4', label: 'Months to Complete' },
-          { num: '2', label: 'Magazine Features' },
-          { num: '100%', label: 'Booking Rate (1 Year)' },
-          { num: '$850', label: 'Per Night Rate' },
-        ],
-        testimonial: `The Airstream went from a quirky idea to the most-booked property in our portfolio. Pragathi brought a level of detail and sophistication I didn't think was possible in 85 square metres. Truly world-class work.`,
-        testimonialAuthor: 'Jordan Mitchell',
-        testimonialRole: 'Owner, Malibu Dream Properties',
-        related: ['minskbelarus','moderncondo','azure'],
-      },
-      moderncondo: {
-        title: 'Modern Condo in City',
-        tag: 'Residential · Contemporary',
-        hero: BASE + 'single/3.jpg',
+      smallapartments: {
+        title: 'Small Apartment Kitchens',
+        tag: 'Compact · Efficient',
+        hero: BASE + 'studios/12.jpg',
         location: 'Bengaluru, Karnataka',
-        area: '240 sq m',
-        year: '2023',
-        lead: 'Arjun Mehta',
-        duration: '6 Months',
-        style: 'Urban Contemporary',
-        overviewH: 'Redefining Urban Living in Bengaluru',
-        overviewText: `<p>The Modern Condo project is one of our most requested case studies — a 4BHK penthouse apartment in Bengaluru, Karnataka, that needed to balance family-friendly functionality with high-end aesthetics.</p><p>The client — a young family of four — wanted a space that was open, playful for the kids, sophisticated for entertaining, and deeply personal. We delivered all four.</p><p>A semi-open kitchen with an island, a kids' room featuring a custom forest mural and loft bed, a home office with hidden storage, and a double-height living room with a kinetic chandelier were among the highlights of this landmark project.</p>`,
-        gallery: [
-          BASE+'single/1.jpg', BASE+'single/2.jpg', BASE+'single/3.jpg',
-          BASE+'single/4.jpg', BASE+'single/13.jpg', BASE+'single/6.jpg',
-        ],
+        area: 'Variable',
+        year: '2024 Design',
+        lead: 'Pragathi Design Team',
+        duration: '2-4 Weeks',
+        style: 'Parallel & L-Shape',
+        overviewH: 'Smart Designs for Compact Living',
+        overviewText: `
+          <p>Make the most of your space with our specially designed <strong>small apartment kitchens</strong>, perfect for modern flats and compact homes. We focus on creating kitchens that are stylish, space-efficient, and highly functional—without compromising on comfort or design.</p>
+          <p>In today's urban homes, space is limited, but smart planning can transform even the smallest kitchen into a beautiful and practical cooking area. Our designs are tailored to maximize every inch while maintaining a clean and modern look.</p>
+
+          <h5 class="mt-4">Recommended Kitchen Layouts</h5>
+          <p>For compact spaces, we suggest the most efficient and practical layouts:</p>
+          <ul class="iconlist ms-3">
+            <li><i class="bi-check-circle-fill text-success" style="margin-right:6px"></i> <strong>Parallel Kitchen (2-Side Layout):</strong> Designed with two facing countertops, this layout offers maximum workspace and smooth movement while cooking.</li>
+            <li><i class="bi-check-circle-fill text-success" style="margin-right:6px"></i> <strong>L-Shaped Compact Kitchen:</strong> A popular choice for small homes, this layout utilizes corner space efficiently and creates an open, clutter-free environment.</li>
+          </ul>
+
+          <h5 class="mt-4">Smart Features for Small Kitchens</h5>
+          <p>We include modern features that enhance usability and save space:</p>
+          <ul class="iconlist ms-3">
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Steel Cabinets with Matte Finish:</strong> Durable, easy to maintain, and gives a sleek modern appearance.</li>
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Wall-Mounted Storage:</strong> Maximizes vertical space and keeps the kitchen organized.</li>
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Pull-Out Drawers & Spice Racks:</strong> Easy access storage for daily essentials.</li>
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Light Color Themes:</strong> Shades like beige, white, and light grey make the kitchen look more spacious and bright.</li>
+          </ul>
+
+          <h5 class="mt-4">Why Choose Our Compact Kitchen Designs</h5>
+          <p>Our small kitchen solutions are designed to offer:</p>
+          <ul class="iconlist mb-3 ms-3">
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Maximum storage in limited space</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Easy maintenance and long-lasting materials</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Modern and elegant appearance</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Comfortable cooking experience</li>
+          </ul>
+          <p>We ensure that even the smallest kitchen feels open, organized, and efficient.</p>
+        `,
+        gallery: [BASE+'studios/1.jpg', BASE+'studios/2.jpg', BASE+'studios/12.jpg', BASE+'new-story-1.webp', BASE+'studios/10.jpg', BASE+'new-story-2.jpg'],
         challenges: [
-          { title: 'Family vs. Aesthetics', body: 'Balancing a design-show look with child-safe, durable materials — every surface was chosen for both beauty and practicality.' },
-          { title: 'Vertical Flow', body: 'Creating visual continuity across a double-height space required careful study of sight lines, lighting, and material repetition.' },
-          { title: 'Budget Optimisation', body: 'Mixing luxury pieces with locally-crafted alternatives allowed us to achieve a premium look within the client\'s budget.' },
+          { title: 'Space Limitations', body: 'Used pull-out organizers, under-cabinet lighting, and tall vertical storage to efficiently utilize every available square inch.' },
+          { title: 'Workflow Management', body: 'Implemented a tight but functional work triangle to make cooking smooth and unobstructed.' },
+          { title: 'Aesthetic Lightness', body: 'Leveraged light color palettes and specialized matte finishes to reflect light and make the space feel twice as large.' }
         ],
         results: [
-          { num: '6', label: 'Months to Complete' },
-          { num: '40%', label: 'Natural Light Increase' },
-          { num: '₹2.2Cr', label: 'Property Value Added' },
-          { num: '5★', label: 'Client Rating' },
+          { num: '50%', label: 'More Storage' },
+          { num: '2-4', label: 'Weeks Installation' },
+          { num: 'Trending', label: 'Layout Strategy' },
+          { num: 'Light', label: 'Color Schemes' }
         ],
-        testimonial: `Pragathi understood us from day one. They designed a home that works for our hectic family life while looking like it belongs in a design magazine. The kids love their room, my husband loves his office, and I'm in love with every corner of it.`,
-        testimonialAuthor: 'Deepika Reddy',
-        testimonialRole: 'Homeowner, Bengaluru',
-        related: ['minskbelarus','malibu','urbanloft'],
+        testimonial: `Using these recommended layouts completely transformed my compact flat. The steel cabinets are incredibly sleek and the pull-outs save me so much hassle!`,
+        testimonialAuthor: 'Happy Client',
+        testimonialRole: 'Homeowner, Shared Apartment',
+        related: ['mediumhomes', 'steelspecial', 'colortrends']
       },
+      mediumhomes: {
+        title: 'Medium Homes (2BHK / 3BHK Houses)',
+        tag: 'Residential · Spacious',
+        hero: BASE + 'studios/1.jpg',
+        location: 'Bengaluru, Karnataka',
+        area: 'Flexible',
+        year: '2024 Design',
+        lead: 'Pragathi Design Team',
+        duration: '3-5 Weeks',
+        style: 'L-Shaped & Semi-Open',
+        overviewH: 'Perfect Balance of Space, Style & Functionality',
+        overviewText: `
+          <p>Upgrade your home with our thoughtfully designed <strong>kitchen interiors for 2BHK and 3BHK homes</strong>, crafted to offer the perfect balance between space, comfort, and modern aesthetics. These kitchens are ideal for families who need more storage, better workflow, and a stylish look.</p>
+          <p>With slightly larger spaces compared to apartments, we design kitchens that feel open, organized, and highly efficient for everyday cooking.</p>
+
+          <h5 class="mt-4">Recommended Kitchen Designs</h5>
+          <p>We suggest layouts that enhance both usability and visual appeal:</p>
+          <ul class="iconlist ms-3">
+            <li><i class="bi-check-circle-fill text-success" style="margin-right:6px"></i> <strong>L-Shaped Kitchen with Breakfast Counter:</strong> A smart layout that utilizes corner space efficiently while adding a stylish breakfast counter for dining or quick meals.</li>
+            <li><i class="bi-check-circle-fill text-success" style="margin-right:6px"></i> <strong>Semi-Open Kitchen:</strong> A modern concept that connects the kitchen with the living or dining area, creating a spacious and welcoming environment.</li>
+          </ul>
+
+          <h5 class="mt-4">Modern Features We Offer</h5>
+          <p>Our kitchens are equipped with features that match today’s lifestyle:</p>
+          <ul class="iconlist ms-3">
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Steel + Wood Combination:</strong> A trending design that blends durability of steel with the warmth of wood finishes.</li>
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Hidden Appliances:</strong> Built-in fridge, microwave, and storage units for a clean and seamless look.</li>
+            <li><i class="bi-check-circle-fill text-primary" style="margin-right:6px"></i> <strong>Tall Storage Units:</strong> Extra storage space for groceries, utensils, and kitchen essentials.</li>
+          </ul>
+
+          <h5 class="mt-4">Why L-Shaped Kitchens Are Popular</h5>
+          <p>L-shaped kitchens are one of the most preferred choices for medium-sized homes because they:</p>
+          <ul class="iconlist mb-3 ms-3">
+            <li><i class="bi-arrow-right-circle-fill text-info" style="margin-right:6px"></i> Provide smooth and efficient workflow</li>
+            <li><i class="bi-arrow-right-circle-fill text-info" style="margin-right:6px"></i> Create separate zones for cooking, preparation, and cleaning</li>
+            <li><i class="bi-arrow-right-circle-fill text-info" style="margin-right:6px"></i> Offer better space utilization without making the kitchen feel crowded</li>
+          </ul>
+
+          <h5 class="mt-4">Why Choose Our Designs</h5>
+          <p>We focus on creating kitchens that are:</p>
+          <ul class="iconlist mb-3 ms-3">
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Spacious and well-organized</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Easy to maintain and durable</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Stylish with modern finishes</li>
+            <li><i class="bi-star-fill text-warning" style="margin-right:6px"></i> Designed for everyday comfort and convenience</li>
+          </ul>
+        `,
+        gallery: [BASE+'studios/2.jpg', BASE+'studios/3.jpg', BASE+'studios/6.jpg', BASE+'new-story-4.webp', BASE+'studios/8.jpg', BASE+'studios/10.jpg'],
+        challenges: [
+          { title: 'Zone Separation', body: 'Designed an optimal layout segmenting the kitchen into preparation, cooking, and dining zones naturally without physical barriers.' },
+          { title: 'Appliance Integration', body: 'Built custom steel and wood enclosures to hide heavy appliances, creating uniform modern lines.' },
+          { title: 'Family Interaction', body: 'Added a stylish breakfast counter ensuring the kitchen remains a social space connecting with the living area.' }
+        ],
+        results: [
+          { num: 'L-Shape', label: 'Prime Layout' },
+          { num: '100%', label: 'Termite Proof' },
+          { num: '2-3', label: 'Dedicated Zones' },
+          { num: 'Trending', label: 'Steel + Wood' }
+        ],
+        testimonial: `The L-shaped layout with the breakfast counter completely altered how my family interacts. Combining the durability of steel with the warmth of wood is pure perfection.`,
+        testimonialAuthor: 'Satisfied Customer',
+        testimonialRole: 'Owner, 3BHK Residence',
+        related: ['luxuryvillas', 'smartkitchen', 'smallapartments']
+      },
+      luxuryvillas: {
+        title: 'Luxury Villas / Farmhouses',
+        tag: 'Premium · Bespoke',
+        hero: BASE + 'studios/7.jpg',
+        location: 'Karnataka, India',
+        area: 'Extensive',
+        year: '2024 Masterpiece',
+        lead: 'Luxury Design Team',
+        duration: '4-8 Weeks',
+        style: 'U-Shaped & Island',
+        overviewH: 'Maximum Storage & Organized Elegance',
+        overviewText: '<p>Designed for high-budget clients to match the grandeur of luxury villas and farmhouses, we deploy massive, intricately planned <strong>U-shaped kitchens</strong> and stunning <strong>Island kitchens</strong> acting as the bold centerpieces of the home.</p><p>Our luxury kitchens feature a full stainless steel premium finish, fully integrated smart lighting, modern chimney stacks, built-in ovens, and concealed refrigeration. We favor matte black, dark grey, and sophisticated olive colors. The U-shape gives unparalleled maximum storage and clearly organized luxurious cooking zones.</p>',
+        gallery: [BASE+'studios/7.jpg', BASE+'studios/5.jpg', BASE+'studios/9.jpg', BASE+'new-story-3.avif', BASE+'studios/4.jpg', BASE+'studios/11.jpg'],
+        challenges: [
+          { title: 'Expansive Layouts', body: 'Managed the large floor area successfully to avoid the kitchen feeling empty, anchoring it with a bold central island.' },
+          { title: 'Complex Appliances', body: 'Seamlessly integrated multiple heavy-duty built-in appliances (ovens, wine coolers) behind sleek cabinet facades.' },
+          { title: 'Premium Ambiance', body: 'Executed full stainless steel finishes balanced with matte dark colors and smart lighting to deliver distinct luxury.' }
+        ],
+        results: [
+          { num: 'U-Shape', label: 'High Storage' },
+          { num: 'Premium', label: 'Steel Finishes' },
+          { num: 'Smart', label: 'Lighting Config' },
+          { num: 'Bespoke', label: 'Hidden Appliances' }
+        ],
+        testimonial: `The dark matte aesthetic paired with the premium stainless steel finish has made my kitchen the most talked-about room in my villa. It\'s an absolute masterpiece of luxury and utility.`,
+        testimonialAuthor: 'Luxury Villa Owner',
+        testimonialRole: 'Exclusive Client',
+        related: ['mediumhomes', 'smartkitchen', 'colortrends']
+      },
+      steelspecial: {
+        title: 'Steel Kitchen Special',
+        tag: 'Durability · Focus',
+        hero: BASE + 'new-hero.jpg',
+        location: 'Available Region-Wide',
+        area: 'Custom',
+        year: 'Flagship Service',
+        lead: 'Pragathi Specialists',
+        duration: 'Ongoing',
+        style: 'Steel + Wood Matte',
+        overviewH: 'The Ultimate Choice for Indian Cooking',
+        overviewText: '<p>Our core business focus and best-selling concept: <strong>Steel + Wood + Matte Finish</strong>. A steel kitchen is the ultimate long-term investment for a modern household.</p><p>When we present to clients, we guarantee a <strong>100% termite-proof kitchen</strong> that is both waterproof and remarkably long-lasting. Steel kitchens are undoubtedly the best choice for Indian cooking environments due to their resilience to heat and oil. They are the preferred standard for unwavering durability, unmatched hygiene, and sustainable lifelong use.</p>',
+        gallery: [BASE+'new-hero.jpg', BASE+'new-story-2.jpg', BASE+'new-story-1.webp', BASE+'studios/3.jpg', BASE+'new-story-4.webp', BASE+'studios/8.jpg'],
+        challenges: [
+          { title: 'Durability Demand', body: 'Solved long-term wear and tear associated with heavy Indian cooking by implementing premium-grade stainless steel surfaces.' },
+          { title: 'Termite Threats', body: 'Replaced traditional completely wooden structures with 100% termite-proof and waterproof steel framework.' },
+          { title: 'Maintenance Ease', body: 'Applied specialized matte finishes to ensure the cabinets are effortlessly easy to wipe down after heavy-duty cooking.' }
+        ],
+        results: [
+          { num: '100%', label: 'Termite Proof' },
+          { num: 'Zero', label: 'Moisture Damage' },
+          { num: 'Matte', label: 'Fingerprint Resist' },
+          { num: 'Best', label: 'For Heavy Cooking' }
+        ],
+        testimonial: `Switching to a steel kitchen was the best decision. No more worrying about termites, water damage, or oil stains—and the wood combination makes it look beautiful instead of industrial.`,
+        testimonialAuthor: 'Home Chef',
+        testimonialRole: 'Satisfied Client',
+        related: ['smallapartments', 'luxuryvillas', 'colortrends']
+      },
+      smartkitchen: {
+        title: 'Smart Kitchen',
+        tag: 'Technology · Automated',
+        hero: BASE + 'new-story-3.avif',
+        location: 'Modern Estates',
+        area: 'Custom',
+        year: '2024 Tech',
+        lead: 'Innovation Team',
+        duration: 'Variable',
+        style: 'High-Tech Integration',
+        overviewH: 'The Standard for the Modern Home',
+        overviewText: '<p>Elevate your lifestyle with our meticulously integrated <strong>Smart Kitchens</strong> built precisely for premium customers. As luxury transitions into smart-living, tech-forward kitchens are rapidly becoming the expected standard.</p><p>Our smart kitchens boast hands-free motion sensor lights, app-controlled and voice-activated appliances, and premium soft-close mechanical drawers. Every element of the kitchen is engineered not only for culinary art but for an exceptionally smooth, automated, and frictionless user experience.</p>',
+        gallery: [BASE+'new-story-3.avif', BASE+'studios/4.jpg', BASE+'studios/10.jpg', BASE+'studios/11.jpg', BASE+'studios/1.jpg', BASE+'studios/5.jpg'],
+        challenges: [
+          { title: 'Tech Integration', body: 'Successfully wired and embedded motion sensors, under-cabinet dynamic LEDs, and app-controlled hubs without exposing ugly cables.' },
+          { title: 'Automated Mechanics', body: 'Installed high-end servodrive mechanisms for touch-to-open and soft-close functionality across all heavy drawers.' },
+          { title: 'Future-Proofing', body: 'Ensured all smart appliance bays and power distributions could manage future device upgrades predictably.' }
+        ],
+        results: [
+          { num: 'Sensor', label: 'Automated Lighting' },
+          { num: 'App', label: 'Controlled Devices' },
+          { num: 'Soft', label: 'Close Hardware' },
+          { num: 'Modern', label: 'Standardization' }
+        ],
+        testimonial: `Walking into my kitchen and having the lights seamlessly illuminate my path, paired with one-touch automated cabinets, brings an entirely new joy to cooking. Absolutely state-of-the-art.`,
+        testimonialAuthor: 'Tech-Savvy Client',
+        testimonialRole: 'Premium Resident',
+        related: ['luxuryvillas', 'steelspecial', 'mediumhomes']
+      },
+      colortrends: {
+        title: 'Color Trends',
+        tag: 'Esthetics · Visuals',
+        hero: BASE + 'new-section.webp',
+        location: 'Global / Regional',
+        area: 'All Sizes',
+        year: 'Current Palette',
+        lead: 'Color Consulting Team',
+        duration: 'Palette Setting',
+        style: 'Modern Colorways',
+        overviewH: 'The Shades Defining the Year',
+        overviewText: '<p>A kitchen’s aesthetic lives and breathes through its color selections. Our team is dedicated to bringing you the most sophisticated, high-conversion visual palettes dominating the industry right now.</p><p>We highly suggest these top trends to all our customers depending on the lighting and size of their space: <strong>Sage green + wood</strong> for nature-inspired warmth, <strong>Beige + white</strong> for expansive openness, <strong>Matte black + steel</strong> for striking minimalist luxury, and <strong>Warm grey + stone</strong> for timeless grounded elegance.</p>',
+        gallery: [BASE+'new-section.webp', BASE+'studios/5.jpg', BASE+'studios/9.jpg', BASE+'new-story-2.jpg', BASE+'studios/7.jpg', BASE+'studios/3.jpg'],
+        challenges: [
+          { title: 'Lighting Nuances', body: 'Navigating how colors like sage green or matte black shift in tone throughout the day under artificial and natural natural lighting.' },
+          { title: 'Material Harmonies', body: 'Pairing the cold, sleek nature of stainless steel with the warm, textured feelings of wood and natural stone.' },
+          { title: 'Personal Stylings', body: 'Helping customers bridge the gap between trending luxury finishes and personal, long-lasting preferences.' }
+        ],
+        results: [
+          { num: 'Sage', label: 'Green + Wood' },
+          { num: 'Beige', label: '+ Pure White' },
+          { num: 'Matte', label: 'Black + Steel' },
+          { num: 'Warm', label: 'Grey + Stone' }
+        ],
+        testimonial: `Following the recommended color palette of Matte Black and Steel gave my home a hotel-like lavishness. The designers truly understand how color shapes a space.`,
+        testimonialAuthor: 'Design-Conscious Client',
+        testimonialRole: 'Homeowner',
+        related: ['steelspecial', 'mediumhomes', 'smallapartments']
+      }
     };
 
     // Fallback for unknown project IDs
-    const defaultProject = projects.minskbelarus;
+    const defaultProject = projects.smallapartments;
 
     // ── Process Steps (same across all projects) ────────────────────────────────
     const processSteps = [
@@ -492,17 +637,17 @@
 
     // ── Related project data ────────────────────────────────────────────────────
     const relatedData = {
-      minskbelarus: { title:'Minsk Belarus Studio', img: BASE+'single/11.jpg' },
-      malibu: { title:'Malibu Dream Airstream', img: BASE+'single/9.jpg' },
-      moderncondo: { title:'Modern Condo in City', img: BASE+'single/3.jpg' },
-      skyline: { title:'Skyline Office Hub', img: BASE+'studios/4.jpg' },
-      azure: { title:'Azure Boutique Hotel', img: BASE+'studios/5.jpg' },
-      urbanloft: { title:'Urban Loft Transformation', img: BASE+'studios/12.jpg' },
+      smallapartments: { title:'Small Apartment Kitchens', img: BASE+'studios/12.jpg' },
+      mediumhomes: { title:'Medium Homes (2BHK / 3BHK Houses)', img: BASE+'studios/1.jpg' },
+      luxuryvillas: { title:'Luxury Villas / Farmhouses', img: BASE+'studios/7.jpg' },
+      steelspecial: { title:'Steel Kitchen Special', img: BASE+'new-hero.jpg' },
+      smartkitchen: { title:'Smart Kitchen', img: BASE+'new-story-3.avif' },
+      colortrends: { title:'Color Trends', img: BASE+'new-section.webp' },
     };
 
     // ── Render page ─────────────────────────────────────────────────────────────
     const params = new URLSearchParams(window.location.search);
-    const key = params.get('project') || 'minskbelarus';
+    const key = params.get('project') || 'smallapartments';
     const p = projects[key] || defaultProject;
 
     // Update title
