@@ -200,161 +200,211 @@
         <div class="content-wrap">
           <div class="container">
 
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-              <button class="filter-btn active" data-filter="all">All Projects</button>
-              <button class="filter-btn" data-filter="residential">Residential</button>
-              <button class="filter-btn" data-filter="commercial">Commercial</button>
-              <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-              <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <!-- Layouts Section -->
+            <div class="row mb-5 mt-4">
+              <div class="col-12 text-center">
+                <h2 class="fw-bold font-secondary" style="font-size: 42px; color: #1d2c4c;">Space-Saving Modular Kitchen Layouts</h2>
+                <p class="text-muted mx-auto mt-3" style="max-width: 800px; font-size: 16px; line-height: 1.8;">
+                  Modern homes need smart solutions, and our space-saving modular kitchen layouts are designed to maximize functionality without compromising on style. Whether you have a compact apartment or a spacious villa, we offer layouts that make the best use of available space while ensuring comfort and efficiency.
+                </p>
+                <p class="text-muted mx-auto" style="max-width: 800px; font-size: 16px; line-height: 1.8;">
+                  Our modular kitchens are carefully planned to create a smooth workflow, better storage, and a clutter-free environment.
+                </p>
+              </div>
             </div>
 
-            <!-- Projects Grid -->
-            <div class="row" id="projects-grid">
-              <div class="col-md-4" data-category="residential">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/12.jpg" alt="Small Apartment Kitchens" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Small Apartment Kitchens</h5>
-                      <span>Compact · Efficient</span><br />
-                      <a href="project-detail.html?project=smallapartments">View Project →</a>
+            <!-- Filter Bar (used as Tabs) -->
+            <ul class="nav border-0 justify-content-center mb-5" id="layoutTabs" role="tablist" style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <li class="nav-item" role="presentation">
+                <button class="filter-btn active" id="tab-lshape" data-bs-toggle="tab" data-bs-target="#content-lshape" type="button" role="tab">L-Shaped</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="filter-btn" id="tab-ushape" data-bs-toggle="tab" data-bs-target="#content-ushape" type="button" role="tab">U-Shaped</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="filter-btn" id="tab-parallel" data-bs-toggle="tab" data-bs-target="#content-parallel" type="button" role="tab">Parallel</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="filter-btn" id="tab-straight" data-bs-toggle="tab" data-bs-target="#content-straight" type="button" role="tab">Straight</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="filter-btn" id="tab-island" data-bs-toggle="tab" data-bs-target="#content-island" type="button" role="tab">Island</button>
+              </li>
+            </ul>
+
+            <!-- Tab Contents -->
+            <div class="tab-content" id="layoutTabsContent">
+              
+              <!-- L-Shaped -->
+              <div class="tab-pane fade show active" id="content-lshape" role="tabpanel" aria-labelledby="tab-lshape">
+                <div class="row align-items-center mb-5">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/interior-design/images/l_shape_kichen_1.jpg" alt="L-Shaped Kitchen" class="rounded w-100" style="height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+                  </div>
+                  <div class="col-lg-6 ps-lg-5">
+                    <h3 class="mb-2 font-secondary" style="font-size: 32px; color: #1d2c4c;">L-Shaped Kitchen <span style="font-size: 20px; font-weight: 400; color: #888;">(Most Popular)</span></h3>
+                    <h5 class="mb-4" style="color: #1c85e8; font-weight: 500;">Smart, Spacious &amp; Highly Functional Design</h5>
+                    <p style="color: #666; line-height: 1.8;">The L-shaped kitchen is one of the most popular and versatile kitchen layouts, ideal for both small apartments and medium-sized homes. Designed along two adjoining walls, this layout makes excellent use of corner space while keeping the kitchen open, organized, and easy to navigate.</p>
+                    <p style="color: #666; line-height: 1.8;">Its smart design allows homeowners to enjoy a clutter-free cooking environment with everything placed within easy reach.</p>
+                    
+                    <div class="row mt-4">
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-triangle-half me-2" style="color:#1c85e8;"></i>Efficient Work Triangle</h6>
+                        <p class="text-muted small mb-0">Improves movement between stove, sink, and fridge.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-arrows-expand me-2" style="color:#1c85e8;"></i>Maximum Space</h6>
+                        <p class="text-muted small mb-0">Uses corner areas effectively and provides ample counter space.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-sliders me-2" style="color:#1c85e8;"></i>Flexible Design</h6>
+                        <p class="text-muted small mb-0">Easily add a breakfast counter or tall storage units.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-stars me-2" style="color:#1c85e8;"></i>Modern Features</h6>
+                        <p class="text-muted small mb-0">Soft-close drawers, hidden appliances &amp; matte steel cabinets.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4" data-category="residential">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/1.jpg" alt="Medium Homes (2BHK / 3BHK Houses)" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Medium Homes (2BHK / 3BHK Houses)</h5>
-                      <span>Residential · Spacious</span><br />
-                      <a href="project-detail.html?project=mediumhomes">View Project →</a>
+
+              <!-- U-Shaped -->
+              <div class="tab-pane fade" id="content-ushape" role="tabpanel" aria-labelledby="tab-ushape">
+                <div class="row align-items-center mb-5">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/interior-design/images/u_shape_kichen_1.avif" alt="U-Shaped Kitchen" class="rounded w-100" style="height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+                  </div>
+                  <div class="col-lg-6 ps-lg-5">
+                    <h3 class="mb-2 font-secondary" style="font-size: 32px; color: #1d2c4c;">U-Shaped Kitchen <span style="font-size: 20px; font-weight: 400; color: #888;">(Maximum Space &amp; Storage)</span></h3>
+                    <h5 class="mb-4" style="color: #1c85e8; font-weight: 500;">Efficient Design for Spacious Homes</h5>
+                    <p style="color: #666; line-height: 1.8;">The U-shaped kitchen is a highly functional layout designed for larger homes and families who need maximum storage and workspace. Built along three connected walls, this layout creates a well-organized and efficient cooking environment.</p>
+                    <p style="color: #666; line-height: 1.8;">It is ideal for homeowners who prefer a dedicated kitchen space with clearly defined zones for cooking, cleaning, and storage.</p>
+                    
+                    <div class="row mt-4">
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-grid me-2" style="color:#1c85e8;"></i>Dedicated Zones</h6>
+                        <p class="text-muted small mb-0">Separated areas for cooking, preparation, and cleaning.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-box-seam me-2" style="color:#1c85e8;"></i>Extensive Storage</h6>
+                        <p class="text-muted small mb-0">Multiple storage cabinets and tall units for maximum capacity.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-lightning me-2" style="color:#1c85e8;"></i>Heavy Usage</h6>
+                        <p class="text-muted small mb-0">Ideal layout for extensive family cooking with smooth workflow.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-layer-backward me-2" style="color:#1c85e8;"></i>Built-in Aesthetics</h6>
+                        <p class="text-muted small mb-0">Seamlessly integrate built-in appliances and task lighting.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4" data-category="luxury residential">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/7.jpg" alt="Luxury Villas / Farmhouses" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Luxury Villas / Farmhouses</h5>
-                      <span>Premium · Bespoke</span><br />
-                      <a href="project-detail.html?project=luxuryvillas">View Project →</a>
+
+              <!-- Parallel -->
+              <div class="tab-pane fade" id="content-parallel" role="tabpanel" aria-labelledby="tab-parallel">
+                <div class="row align-items-center mb-5">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/interior-design/images/parallel_kichen_1.webp" alt="Parallel Kitchen" class="rounded w-100" style="height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+                  </div>
+                  <div class="col-lg-6 ps-lg-5">
+                    <h3 class="mb-2 font-secondary" style="font-size: 32px; color: #1d2c4c;">Parallel Kitchen <span style="font-size: 20px; font-weight: 400; color: #888;">(For Apartments)</span></h3>
+                    <h5 class="mb-4" style="color: #1c85e8; font-weight: 500;">Efficient Design for Compact Living</h5>
+                    <p style="color: #666; line-height: 1.8;">The parallel kitchen, also known as a galley kitchen, is one of the most practical and space-efficient layouts for modern apartments. Designed with two parallel countertops facing each other, this layout creates a streamlined and highly functional cooking space.</p>
+                    <p style="color: #666; line-height: 1.8;">It is ideal for compact homes where maximizing every inch of space is essential without compromising on usability or style.</p>
+                    
+                    <div class="row mt-4">
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-symmetry-horizontal me-2" style="color:#1c85e8;"></i>Clear Division</h6>
+                        <p class="text-muted small mb-0">Separate sides for cooking/prep and cleaning/storage.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-speedometer2 me-2" style="color:#1c85e8;"></i>Optimized Efficiency</h6>
+                        <p class="text-muted small mb-0">Everything placed within arm's reach for a faster process.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-usb-drive me-2" style="color:#1c85e8;"></i>Max Storage</h6>
+                        <p class="text-muted small mb-0">Overhead cabinets and pull-out drawers to optimize narrow space.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-palette me-2" style="color:#1c85e8;"></i>Visual Tricks</h6>
+                        <p class="text-muted small mb-0">Use reflective steel finishes and light colors to expand the feel.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6" data-category="commercial">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/new-hero.jpg" alt="Steel Kitchen Special" style="height:340px; object-fit:cover;" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Steel Kitchen Special</h5>
-                      <span>Durability · Focus</span><br />
-                      <a href="project-detail.html?project=steelspecial">View Project →</a>
+
+              <!-- Straight -->
+              <div class="tab-pane fade" id="content-straight" role="tabpanel" aria-labelledby="tab-straight">
+                <div class="row align-items-center mb-5">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/interior-design/images/stright_kichen_2.jpg" alt="Straight Kitchen" class="rounded w-100" style="height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+                  </div>
+                  <div class="col-lg-6 ps-lg-5">
+                    <h3 class="mb-2 font-secondary" style="font-size: 32px; color: #1d2c4c;">Straight Kitchen <span style="font-size: 20px; font-weight: 400; color: #888;">(Simple &amp; Space-Saving)</span></h3>
+                    <h5 class="mb-4" style="color: #1c85e8; font-weight: 500;">Perfect for Compact &amp; Modern Living</h5>
+                    <p style="color: #666; line-height: 1.8;">The straight kitchen, also known as a one-wall kitchen, is a sleek and space-saving layout where all kitchen elements are arranged along a single wall. This design is ideal for studio apartments, small homes, and compact spaces where simplicity and efficiency are key.</p>
+                    <p style="color: #666; line-height: 1.8;">With a clean and minimal look, the straight kitchen offers a clutter-free environment while maintaining full functionality for everyday cooking.</p>
+                    
+                    <div class="row mt-4">
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-layout-three-columns me-2" style="color:#1c85e8;"></i>Linear Arrangement</h6>
+                        <p class="text-muted small mb-0">Everything placed perfectly in line for immediate access.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-magic me-2" style="color:#1c85e8;"></i>Clutter-Free Look</h6>
+                        <p class="text-muted small mb-0">Single-wall design avoids overcrowding and keeps it neat.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-collection me-2" style="color:#1c85e8;"></i>Smart Storage</h6>
+                        <p class="text-muted small mb-0">Utilizes vertical space efficiently via wall-mounted shelves.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-layers me-2" style="color:#1c85e8;"></i>Seamless Appliances</h6>
+                        <p class="text-muted small mb-0">Built-in setups ensure a flawless, unobstructed view.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6" data-category="residential luxury">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/new-story-3.avif" alt="Smart Kitchen" style="height:340px; object-fit:cover;" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Smart Kitchen</h5>
-                      <span>Technology · Automated</span><br />
-                      <a href="project-detail.html?project=smartkitchen">View Project →</a>
+
+              <!-- Island -->
+              <div class="tab-pane fade" id="content-island" role="tabpanel" aria-labelledby="tab-island">
+                <div class="row align-items-center mb-5">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/interior-design/images/Island_Kitchen_2.jpg" alt="Island Kitchen" class="rounded w-100" style="height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+                  </div>
+                  <div class="col-lg-6 ps-lg-5">
+                    <h3 class="mb-2 font-secondary" style="font-size: 32px; color: #1d2c4c;">Island Kitchen <span style="font-size: 20px; font-weight: 400; color: #888;">(Luxury Style)</span></h3>
+                    <h5 class="mb-4" style="color: #1c85e8; font-weight: 500;">Modern Living with a Premium Touch</h5>
+                    <p style="color: #666; line-height: 1.8;">The island kitchen is a symbol of modern luxury and elegant living. Designed with a central island unit, this layout transforms your kitchen into a stylish and functional centerpiece of your home. It is perfect for open-plan spaces, villas, and high-end homes where design and comfort go hand in hand.</p>
+                    <p style="color: #666; line-height: 1.8;">More than just a kitchen, it creates a space where cooking, dining, and socializing come together seamlessly.</p>
+                    
+                    <div class="row mt-4">
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-pentagon-half me-2" style="color:#1c85e8;"></i>Multi-Functional Hub</h6>
+                        <p class="text-muted small mb-0">Use for cooking prep, interactive dining, and deep storage.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-people me-2" style="color:#1c85e8;"></i>Social Entertaining</h6>
+                        <p class="text-muted small mb-0">Interact with family or guests easily while you cook.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-gem me-2" style="color:#1c85e8;"></i>Luxury Finishes</h6>
+                        <p class="text-muted small mb-0">Matte black steel, designer lighting &amp; luxury counters.</p>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <h6 style="color: #1d2c4c; font-weight: 600;"><i class="bi-arrows-fullscreen me-2" style="color:#1c85e8;"></i>Open Layouts</h6>
+                        <p class="text-muted small mb-0">Brilliantly connects living spaces for an airy environment.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4" data-category="commercial">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/new-section.webp" alt="Color Trends" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Color Trends</h5>
-                      <span>Esthetics · Visuals</span><br />
-                      <a href="project-detail.html?project=colortrends">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="luxury residential">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/7.jpg" alt="Royal Penthouse Suite" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Royal Penthouse Suite</h5>
-                      <span>Luxury · Residential</span><br />
-                      <a href="project-detail.html?project=penthouse">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="commercial hospitality">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/8.jpg" alt="The Grand Bistro" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>The Grand Bistro</h5>
-                      <span>Commercial · Restaurant</span><br />
-                      <a href="project-detail.html?project=bistro">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="residential luxury">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/9.jpg" alt="Nordic Cliff Villa" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Nordic Cliff Villa</h5>
-                      <span>Residential · Scandinavian</span><br />
-                      <a href="project-detail.html?project=nordicvilla">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="commercial">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/10.jpg" alt="Tech Campus Lounge" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Tech Campus Lounge</h5>
-                      <span>Commercial · Modern</span><br />
-                      <a href="project-detail.html?project=techcampus">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="hospitality luxury">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/11.jpg" alt="Ivory Spa Retreat" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Ivory Spa Retreat</h5>
-                      <span>Hospitality · Wellness</span><br />
-                      <a href="project-detail.html?project=ivoryretreats">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4" data-category="residential">
-                <div class="project-card">
-                  <img src="assets/interior-design/images/studios/12.jpg" alt="Urban Loft Transformation" />
-                  <div class="project-overlay">
-                    <div class="project-info">
-                      <h5>Urban Loft Transformation</h5>
-                      <span>Residential · Industrial</span><br />
-                      <a href="project-detail.html?project=urbanloft">View Project →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
 
           </div>
@@ -511,7 +561,7 @@
               <div class="col-sm-6 col-lg-3">
                 <div class="widget">
                   <div class="fw-normal text-lowercase mb-0" style="font-size: 36px; letter-spacing: -1px">Pragathi Home Solutions</div>
-                  <p class="text-muted fw-light">© 2024 All Rights Reserved</p>
+                  <p class="text-muted fw-light">© 2026 All Rights Reserved</p>
                   <div class="app-links">
                     <p>Follow Us</p>
                     <a href="#" class="link"><i class="bi-instagram"></i> <span>Instagram</span></a><br />
@@ -562,7 +612,7 @@
         <div id="copyrights" style="background-color: #fff">
           <div class="container">
             <div class="w-100 text-center m-0">
-              <span>Copyrights &copy; 2024 All Rights Reserved by Pragathi Home Solutions.</span>
+              <span>Copyrights &copy; 2026 All Rights Reserved by Pragathi Home Solutions.</span>
             </div>
           </div>
         </div>
