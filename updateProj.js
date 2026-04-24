@@ -9,7 +9,7 @@ const replacement = `// ── Project Data ────────────
       smallapartments: {
         title: 'Small Apartment Kitchens',
         tag: 'Compact · Efficient',
-        hero: BASE + 'studios/12.jpg',
+        hero: BASE + 'small_kitchens.png',
         location: 'Bengaluru, Karnataka',
         area: 'Variable',
         year: '2024 Design',
@@ -18,7 +18,7 @@ const replacement = `// ── Project Data ────────────
         style: 'Parallel & L-Shape',
         overviewH: 'Maximizing Small Spaces Efficiently',
         overviewText: '<p>Perfect for flats and compact homes near your area, our small apartment kitchens are designed to guarantee exceptional utility without occupying unnecessary floor space.</p><p>We highly recommend layout types like a <strong>Parallel Kitchen (2-side layout)</strong> or a compact <strong>L-shape kitchen</strong>. By incorporating steel cabinets with a modern matte finish, space-saving wall-mounted storage, specialized pull-out drawers for spices, and light colors (such as beige, white, or light grey), we create a spacious and deeply organized cooking environment.</p>',
-        gallery: [BASE+'studios/1.jpg', BASE+'studios/2.jpg', BASE+'studios/12.jpg', BASE+'new-story-1.webp', BASE+'studios/10.jpg', BASE+'new-story-2.jpg'],
+        gallery: [BASE+'small_kitchens.png', BASE+'small_kichen_2.webp', BASE+'small_kichen_3.jpg', BASE+'small_kichen_4.jpg', BASE+'small_kichen_5.jpg', BASE+'parallel_kichen_1.webp'],
         challenges: [
           { title: 'Space Limitations', body: 'Used pull-out organizers, under-cabinet lighting, and tall vertical storage to efficiently utilize every available square inch.' },
           { title: 'Workflow Management', body: 'Implemented a tight but functional work triangle to make cooking smooth and unobstructed.' },
@@ -38,7 +38,7 @@ const replacement = `// ── Project Data ────────────
       mediumhomes: {
         title: 'Medium Homes (2BHK / 3BHK Houses)',
         tag: 'Residential · Spacious',
-        hero: BASE + 'studios/1.jpg',
+        hero: BASE + '2bhk-kitchen.png',
         location: 'Bengaluru, Karnataka',
         area: 'Flexible',
         year: '2024 Design',
@@ -47,7 +47,7 @@ const replacement = `// ── Project Data ────────────
         style: 'L-Shaped & Semi-Open',
         overviewH: 'Better Workflow & Separate Zones',
         overviewText: '<p>For 2BHK and 3BHK homes, achieving the perfect balance of aesthetic appeal and functional separation is key.</p><p>We recommend an <strong>L-shaped kitchen with a breakfast counter</strong> or a <strong>semi-open kitchen</strong>. To enrich the space, we blend a highly trending <strong>Steel + Wood combination</strong>, incorporating tall storage units and cleverly hidden appliances to offer a deeply clean, modern look. The L-shape is incredibly popular because it allows for an uninterrupted workflow and distinct separated zones for cleaning, prep, and cooking.</p>',
-        gallery: [BASE+'studios/2.jpg', BASE+'studios/3.jpg', BASE+'studios/6.jpg', BASE+'new-story-4.webp', BASE+'studios/8.jpg', BASE+'studios/10.jpg'],
+        gallery: [BASE+'2bhk-kitchen.png', BASE+'2bhk_2.avif', BASE+'l_shape_kichen_1.jpg', BASE+'center_kichen_3.jpg', BASE+'center_kichen_4.jpg', BASE+'centerl_kichen1.jpg'],
         challenges: [
           { title: 'Zone Separation', body: 'Designed an optimal layout segmenting the kitchen into preparation, cooking, and dining zones naturally without physical barriers.' },
           { title: 'Appliance Integration', body: 'Built custom steel and wood enclosures to hide heavy appliances, creating uniform modern lines.' },
@@ -197,8 +197,8 @@ const replacement = `// ── Project Data ────────────
 
     // ── Related project data ────────────────────────────────────────────────────
     const relatedData = {
-      smallapartments: { title:'Small Apartment Kitchens', img: BASE+'studios/12.jpg' },
-      mediumhomes: { title:'Medium Homes (2BHK / 3BHK Houses)', img: BASE+'studios/1.jpg' },
+      smallapartments: { title:'Small Apartment Kitchens', img: BASE+'small_kitchens.png' },
+      mediumhomes: { title:'Medium Homes (2BHK / 3BHK Houses)', img: BASE+'2bhk-kitchen.png' },
       luxuryvillas: { title:'Luxury Villas / Farmhouses', img: BASE+'studios/7.jpg' },
       steelspecial: { title:'Steel Kitchen Special', img: BASE+'new-hero.jpg' },
       smartkitchen: { title:'Smart Kitchen', img: BASE+'new-story-3.avif' },
